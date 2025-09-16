@@ -1,0 +1,144 @@
+/*------------------------------
+  RS Timecounter
+  -----------------------------*/
+.rs-timecounter .time_circles {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.rs-timecounter .time_circles canvas {
+  opacity: 0;
+}
+.rs-timecounter .time_circles div {
+  position: absolute;
+  padding-right: 0;
+  text-align: center;
+}
+.rs-timecounter .time_circles div span {
+  line-height: 1.2;
+  font-size: 55px;
+}
+.rs-timecounter .time_circles div h4 {
+  margin: 0;
+}
+.rs-timecounter.circle_border_on .time_circles canvas {
+  opacity: 1;
+  visibility: visible;
+}
+.rs-timecounter.circle_border_on .time_circles > div {
+  opacity: 1;
+  visibility: visible;
+}
+.rs-timecounter.separator .time_circles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px !important;
+}
+.rs-timecounter.separator .time_circles > canvas {
+  display: none;
+}
+.rs-timecounter.separator .time_circles > div {
+  opacity: 1;
+  visibility: visible;
+  position: relative !important;
+  top: inherit !important;
+  left: inherit !important;
+  width: max-content !important;
+  padding: 0px 70px !important;
+}
+.rs-timecounter.separator .time_circles > div:after {
+  content: ":";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 30px;
+}
+.rs-timecounter.separator .time_circles > div:last-child:after {
+  display: none;
+}
+.rs-timecounter.separator .time_circles > div h4 {
+  position: relative;
+  z-index: 1;
+  padding: 10px;
+  border-bottom: 1px dashed #00100B;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.rs-timecounter.separator .time_circles > div span {
+  display: block;
+}
+.rs-timecounter.background_style .time_circles > div {
+  opacity: 1;
+  visibility: visible;
+  padding: 20px;
+  padding-top: 30px;
+}
+.rs-timecounter.background_style .time_circles > div span {
+  background: transparent;
+}
+.rs-timecounter.background_style .time_circles > div span,
+.rs-timecounter.background_style .time_circles > div h4 {
+  position: relative;
+  z-index: 1;
+}
+.rs-timecounter.background_style .time_circles > div:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+  width: 90%;
+  height: 100%;
+}
+.rs-timecounter.number_border .time_circles > div {
+  opacity: 1;
+  visibility: visible;
+}
+.rs-timecounter.number_border .time_circles > div span {
+  border: 4px solid #4a4a4a;
+  padding: 0 15px;
+}
+.rs-timecounter.number_border .time_circles > div h4 {
+  margin-bottom: 30px;
+}
+.rs-timecounter.number_border .time_circles > div span,
+.rs-timecounter.number_border .time_circles > div h4 {
+  position: relative;
+  z-index: 1;
+}
+.rs-timecounter.circle_vartical_border .time_circles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px !important;
+}
+.rs-timecounter.circle_vartical_border .time_circles > canvas {
+  display: none;
+}
+.rs-timecounter.circle_vartical_border .time_circles > div {
+  opacity: 1;
+  visibility: visible;
+  position: relative !important;
+  top: inherit !important;
+  left: inherit !important;
+  width: max-content !important;
+  padding: 0px 20px !important;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.rs-timecounter.circle_vartical_border .time_circles > div:last-child {
+  padding-right: 0 !important;
+}
+.rs-timecounter.circle_vartical_border .time_circles > div:first-child {
+  padding-left: 0 !important;
+}
+.rs-timecounter.circle_border_of .time_circles > div {
+  opacity: 1;
+  visibility: visible;
+}
+
+/*# sourceMappingURL=countdown.css.map */

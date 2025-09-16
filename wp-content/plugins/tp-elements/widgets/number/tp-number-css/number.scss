@@ -1,0 +1,297 @@
+@import '../../../scss/base';
+
+.tps-addon-number {
+    .number-part {
+        position: relative;
+        text-align: center;
+
+        .number-icon {
+            display: inline-block;
+            padding: 5px;
+            font-size: 50px;
+            color: var(--primaryColor);
+            transition: all ease .3s;
+
+            i {
+                transition: all ease .3s;
+            }
+
+            img {
+                max-width: unset;
+                width: 50px;
+                height: 50px;
+            }
+
+            &.grayscale {
+                img {
+                    filter: gray;
+                    -webkit-filter: grayscale(1);
+                    -moz-filter: grayscale(100%);
+                    -ms-filter: grayscale(100%);
+                    -o-filter: grayscale(100%);
+                    filter: grayscale(100%);
+                    transition: all 0.3s ease 0s;
+
+                    &:hover {
+                        filter: none;
+                        -webkit-filter: grayscale(0);
+                        -moz-filter: grayscale(0);
+                        -ms-filter: grayscale(0);
+                        -o-filter: grayscale(0);
+                        filter: grayscale(0);
+                    }
+                }
+            }
+
+            &:hover {
+                color: var(--secondaryColor);
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                z-index: 0;
+                left: 50%;
+                top: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                display: block;
+                width: 90px;
+                height: 90px;
+                background: var(--primaryColor);
+                border-radius: 50%;
+                animation: pulse-border 1500ms ease-out infinite;
+                opacity: 0;
+                transition: all 0.3s ease 0s;
+                visibility: hidden;
+            }
+        }
+
+        .number-text {
+            position: relative;
+
+            .number-area {
+                display: inline-block;
+                margin-bottom: 40px;
+                z-index: 1;
+                position: relative;
+                transition: all 0.3s ease 0s;
+                text-align: center;
+                .number-prefix{
+                    color:#fff;
+                    background-color: var(--primaryColor);
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 60px;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    position: relative;
+                    &:before {
+                        position: absolute;
+                        content: "";
+                        left: 50%;
+                        top: 50%;
+                        background: #e81c2e1a;
+                        height: 90px;
+                        width: 90px;
+                        transform: translate(-50%, -50%);
+                        z-index: -1;
+                        border-radius: 50%;
+    
+                    }
+                }
+
+                
+            }
+
+            .number-prefix {
+                display: block;
+                font-size: 50px;
+                font-weight: 700;
+                line-height: 1.4;
+                color: var(--titleColor);
+            }
+
+            .number-title {
+                position: relative;
+
+                .title {
+                    font-size: 24px;
+                    margin: 0 0 10px;
+                    color: var(--titleColor);
+
+                    a {
+                        color: var(--titleColor);
+
+                        &:hover {
+                            color: var(--hoverColor);
+                        }
+                    }
+                }
+            }
+
+            .number-txt {
+                color: var(--bodyColor);
+                margin: 0;
+            }
+
+            .number-btn-part {
+                margin: 15px 0 0;
+
+                .number-btn {
+                    position: relative;
+                    display: inline-block;
+                    color: var(--secondaryColor);
+                    transition: all ease .3s;
+
+                    i {
+                        transition: all ease .3s;
+                    }
+
+                    &:hover {
+                        color: var(--primaryColor);
+                    }
+
+                    &.icon-after {
+                        span {
+                            float: left;
+                        }
+
+                        i {
+                            margin-left: 10px;
+                        }
+                    }
+
+                    &.icon-before {
+                        span {
+                            float: right;
+                        }
+
+                        i {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &:after {
+            content: "";
+            width: 0;
+            height: 4px;
+            background: var(--primaryColor);
+            position: absolute;
+            transition: all .3s ease 0s;
+            bottom: 0;
+            left: 50%;
+            z-index: 9;
+            transform: translateX(-50%);
+        }
+
+        &:hover {
+            .number-icon {
+                color: var(--secondaryColor);
+
+                &:after {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+
+            .number-text {
+                .number-title {
+                    .title {
+                        color: var(--primaryColor);
+
+                        a {
+                            color: var(--primaryColor);
+                        }
+                    }
+                }
+            }
+
+            &:after {
+                width: 100%;
+            }
+        }
+
+    }
+
+    &.number-style2 {
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--primaryColor);
+            transform: scaleY(0);
+            transition: all .3s ease 0s;
+        }
+
+        .number-part {
+            background: 0 0;
+            text-align: left;
+            position: relative;
+            z-index: 1;
+        }
+
+        &:hover {
+            &:before {
+                transform: scaleY(1);
+            }
+        }
+    }
+
+    &.number-style3 {
+        .number-part {
+            border-bottom-width: 4px;
+            transition: all .3s ease 0s;
+            position: relative;
+
+            .number-icon {
+                width: 90px;
+                margin: 0 auto;
+                position: absolute;
+                left: 50%;
+                top: -45px;
+                transform: translateX(-50%);
+                background: #fff;
+                box-shadow: 0px 3px 36px rgba(0, 0, 0, .04);
+                transition: all .3s ease 0s;
+                height: 90px;
+                line-height: 90px;
+                text-align: center;
+                border-radius: 100%;
+
+                i {
+                    position: absolute;
+                    transform: translate(-50%, -50%);
+                    left: 50%;
+                    top: 50%;
+                }
+
+                img {
+                    width: 45px;
+                    height: 45px;
+                    position: absolute;
+                    transform: translate(-50%, -50%);
+                    left: 50%;
+                    top: 50%;
+                }
+            }
+
+            &:hover {
+                .number-icon {
+                    top: -35px;
+                }
+            }
+        }
+    }
+    &.number-style4 {
+        .number-part {
+            display: inline-flex;
+        }
+    }
+}

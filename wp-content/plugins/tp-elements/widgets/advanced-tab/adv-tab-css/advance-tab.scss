@@ -1,0 +1,49 @@
+@import '../../../scss/base';
+.tps-tab-advance{
+    .nav{
+        background: #F2F3F5;
+        padding: 12px 6px;
+        margin: 0;
+        margin-top: 35px;
+        li{
+            button{
+                border: none;
+                background: transparent;
+                border-radius: 100px;
+                padding: 8px 25px;
+                color: var(--titleColor);
+                font-size: 18px;
+                font-weight: 600;
+                font-family: var(--titleFont);
+                position: relative;
+                &::before {
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    height: 2px;
+                    width: 0;
+                    content: "";
+                    background: var(--titleColor);
+                }
+                &.active {
+                    padding-left: 70px;
+                }
+                &.active::before{
+                    margin-left: 25px;
+                    width: 40px;
+                }
+            }
+        }
+    }    
+  }
+  .tab-custom-nav{
+    .nav{
+        float: right;
+        position: relative;
+        bottom: 102px;
+        z-index: 1;
+    }
+    .tab-content{
+        clear: both;
+    }
+  }

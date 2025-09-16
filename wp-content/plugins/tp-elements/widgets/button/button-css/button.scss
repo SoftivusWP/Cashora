@@ -1,0 +1,276 @@
+@import '../../../scss/base';
+.pixelaxis-button {
+    a{
+        display: inline-block;
+        color: #fff;
+        padding: 17px 33px;
+        font-size: 16px;
+        font-weight: 700;   
+        font-family: var(--titleFont);
+        line-height: 16px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        background: var(--primaryColor);
+        border-radius: 2px;
+        position: relative;
+        transition: 0.3s;
+        z-index: 1;
+        overflow: hidden;  
+        &::before {
+            position: absolute;
+            content: "";
+            top: 50%;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            width: 0px;
+            height: 0px;
+            background: var(--titleColor);
+            transition: all 0.5s;
+            z-index: -1;
+        }      
+        &:hover {
+            &::before {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        svg {
+            width: 20px;
+            position: relative;
+        }
+        &::after {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            content: "";
+            background: var(--titleColor);
+            transform: translateY(110%);
+            transition: 0.3s;
+            z-index: -1;
+        }
+        &:hover::after {
+            transform: translateY(0%);
+        }  
+           
+    }
+    &.secondary_btn{
+       a{
+            background: var(--titleColor);
+            &:after{
+              background: var(--primaryColor);
+            }
+       }     
+    }  
+}
+
+// //Slider Button
+.slider-pixelaxis-button {
+    display: inline-block;
+    color: #fff;
+    padding: 17px 33px;
+    font-size: 16px;
+    font-weight: 700;   
+    font-family: var(--titleFont);
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background: var(--primaryColor);
+    border-radius: 2px;
+    position: relative;
+    transition: 0.3s;
+    z-index: 1;
+    overflow: hidden;     
+    cursor: pointer;   
+    &:hover {
+        background: var(--titleColor);
+    }
+    svg {
+        width: 20px;
+        position: relative;
+    }
+    &::after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+        background: var(--titleColor);
+        transform: translateY(110%);
+        transition: 0.3s;
+        z-index: -1;
+    }
+    &:hover::after {
+        transform: translateY(0%);
+    }  
+    &.style-2{
+        &:hover {
+            background: var(--titleColor);
+            color:#fff !important;
+        }
+    }
+}
+
+//Slider Call Btn
+.slider-call-area {
+    display: flex;
+    align-items: flex-start;
+    .icon {
+        i {
+            width: 52px;
+            height: 52px;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primaryColor);
+            font-weight: 600;
+            margin-right: 15px;
+            margin-bottom: 20px;
+        }
+    }
+    .slider-detail {
+        span {
+            display: block;
+            text-transform: capitalize;
+            color: var(--bodyColor);
+            margin-bottom: 10px;
+        }
+        a {
+            font-weight: 700;
+            font-size: 24px;
+            color: #fff;
+            line-height: 37px;
+            transition: 0.3s;
+            &:hover {
+                color: var(--primaryColor);
+            }
+        }
+    }
+}
+
+//Revolution Slider Tab Style
+#rev_slider_2_1_wrapper .zeus .tp-tab {
+    text-align: center;
+    .tp-tab-title {
+        display: inline-block;
+        background: transparent;
+        line-height: 8px;
+        position: relative;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+}
+.tp-tabs-inner-wrapper {
+    .tp-tab.selected {
+        .tp-tab-title {
+            position: relative;
+            &::after {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 1px;
+                background: #000;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+// Handyman Slider Button
+.slider-pixelaxis-button.handyman_slider_btn.rs-layer {
+    padding: 15px 60px 15px 24px;
+    position: relative;
+    &:hover {
+        color: #fff !important;
+    }
+    &::before {
+        content: '\ea65';
+        font-family: "tp-icons";
+        display: inline-block;
+        background: var(--primaryColor);
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: #fff;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+// Engineer Slider Button
+.slider-pixelaxis-button.engineer.rs-layer {
+    background: transparent !important;
+    border: 1px solid #FFFFFF !important;
+    color: var(--whiteColor) !important;
+    display: flex;
+    align-items: center;
+    padding: 18px 30px 18px 30px;
+    &:hover {
+        border: 1px solid var(--primaryColor) !important;
+    }
+    &:hover::after {
+        background: var(--primaryColor) !important;
+    }
+}
+.slider-pixelaxis-button.engineer.btn-1.rs-layer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 18px 70px 18px 30px !important;
+    &::before {
+        content: '\ea65';
+        font-family: "tp-icons";
+        display: inline-block;
+        background: var(--whiteColor);
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: var(--primaryColor);
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+//Engineer Slider Nav
+.engineer_slider .tp-tabs-inner-wrapper .tp-tab-title {
+    color: #ffffff;
+    background: transparent;
+    width: 67px !important;
+    height: 67px !important;
+    line-height: 67px !important;
+    text-align: center;
+    padding: 20px 10px !important;
+    border: 2px solid #fff;
+    border-radius: 50px;
+}
+.engineer_slider .tp-tabs-inner-wrapper .tp-tab.selected .tp-tab-title::after {
+    content: "";
+    display: none;
+}
+.engineer_slider #rev_slider_6_1_wrapper .zeus .tp-tab.selected .tp-tab-title {
+    color: var(--primaryColor) !important;
+    background: #ffffff;
+}
+
+//Metform Button
+button.metform-btn.metform-submit-btn.elevate_metform_btn svg {
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    padding: 13px;
+    margin-left: 14px;
+}
+
+

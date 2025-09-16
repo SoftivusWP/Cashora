@@ -1,0 +1,10 @@
+:root {
+  --primaryColor: var(--primaryColor);
+  --secondaryColor: var(--primaryColor);
+}
+
+.rs-business-hour .rs-business-schedule {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+}/*# sourceMappingURL=business-hour.css.map */

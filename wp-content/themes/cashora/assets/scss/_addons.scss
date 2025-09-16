@@ -1,0 +1,170 @@
+.single-teams{
+    .bg-team{
+        background: var(--btnColor);
+        .col-lg-5,
+        .col-lg-7{
+            padding: 0;
+        }
+    }
+    .team-information{
+        padding:50px;
+        h3{
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 61px;
+            color: #FFFFFF;
+            margin-bottom: 10px;
+        }
+        .theme_btn{
+            margin-top: 30px;
+            display: inline-block;
+            color: #ffffff;
+            border-radius: 0;
+            border: 1px solid transparent;
+            transition: all .6s;
+            &:hover {
+                border: 1px solid #ddd;
+                background: transparent;
+                color: #111111;                
+            }
+        }
+        .team-dsocial {
+            margin-top: 50px;
+            a {
+                color: #111111;
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                display: inline-block;
+                border: 2px solid #efefef;
+                text-align: center;
+                margin-right: 10px;
+                transition: all .5s;
+                &:hover {
+                    background: var(--primaryColor);
+                    color: #ffffff;
+                    border: 2px solid var(--primaryColor);
+                }
+            }
+        }
+    }
+    .team-info-shape {
+        margin-bottom: 15px;
+        span {
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            background: #dd5903;
+            margin: 0 5px;
+            transform: rotate(45deg);
+        }
+    }
+    .designation-info{
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;   
+        font-size:14px;
+        color:var(--primaryColor);   
+    }
+    .short-desc{
+        margin-bottom: 50px;
+    }
+    .adress-box{
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 18px;
+        margin-bottom: 25px;
+        i{
+            width: 60px;
+            height: 60px;
+            color: var(--primaryColor);
+            background: #EDEDED;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 20px;
+        }
+        .address-content{
+            margin-left: 15px;
+            span{
+                display: block;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: #6E777D;
+                font-family: var(--titleFont);
+                transition: 0.3s;
+            
+            }
+            h5{
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 30px;
+                color: #FFFFFF;
+                transition: 0.3s;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.big-bg-porduct-details{
+    position: relative;
+    img{
+        width: 100%;        
+    }
+}
+
+
+// Only for events projects 
+.tribe-tickets__rsvp-wrapper {
+    margin-bottom: 40px !important;;
+}
+.tp-advance-tab-vertical-scroll .tps-tab-content-one {
+    max-height: 565px;
+    overflow-y: scroll;
+}
+.btn-100 a.pixelaxis_button, .w_100 a.pixelaxis_button, .btn-100 .metform-submit-btn {
+    width: 100%;
+}
+.testimonial-hover-white:hover .elementor-testimonial-content {
+    color: #fff !important;
+}
+.testimonial-hover-white:hover .elementor-testimonial-name {
+    color: #fff !important;
+}
+.item-last-border-none .pixelaxis-addon-events-list:last-child {
+    border-width: 0 !important;
+}
+.tp-middle-custom-reverse .pixelaxis-addon-events .events-part {
+    gap: 20px;
+}
+.tp-middle-custom-reverse .tp-events-dynamic-wrapp .row > .col-xl-6.col-lg-12:nth-child(3) .events-part {flex-direction: row;
+}
+.tp-middle-custom-reverse .tp-events-dynamic-wrapp .row > .col-xl-6.col-lg-12:nth-child(4) .events-part {
+    flex-direction: row;
+}
+.p-mb-0 p {
+    margin-bottom: 0;
+}
+.tp-instagram-icon-wrapp:hover .instagram-hover-icon {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+.tp-instagram-icon-wrapp .instagram-hover-icon {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s linear 0s;
+    transform: scale(0.8);
+}
+.slightly-blur-head {
+background: rgba(255, 255, 255, 0.05);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(0px);
+-webkit-backdrop-filter: blur(0px);
+}

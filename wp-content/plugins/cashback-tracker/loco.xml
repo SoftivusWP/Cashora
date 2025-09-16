@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bundle name="Cashback Tracker">
+  <domain name="cashback-tracker">
+    <project name="Cashback Tracker" slug="cashback-tracker">
+      <source>
+        <directory>.</directory>
+      </source>
+      <target>
+        <directory>languages</directory>
+      </target>
+      <template>
+        <file>languages/cashback-tracker.pot</file>
+      </template>
+    </project>
+  </domain>
+</bundle>

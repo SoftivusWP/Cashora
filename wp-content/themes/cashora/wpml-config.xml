@@ -1,0 +1,32 @@
+<wpml-config>
+    <!-- Example for Theme Options -->
+    <theme>
+        <options>
+            <option name="theme_option_name">
+                <key name="option_key">Option Label</key>
+            </option>
+        </options>
+    </theme>
+
+    <!-- Example for Custom Post Types -->
+    <custom-types>
+        <custom-type translate="1">custom_post_type_name</custom-type>
+    </custom-types>
+
+    <!-- Example for Custom Fields -->
+    <custom-fields>
+        <custom-field action="translate">custom_field_name</custom-field>
+    </custom-fields>
+
+    <!-- Example for Widgets -->
+    <widgets>
+        <widget name="widget_id">
+            <field>widget_field_name</field>
+        </widget>
+    </widgets>
+
+    <!-- Example for Admin Texts -->
+    <admin-texts>
+        <key name="option_name">Option Label</key>
+    </admin-texts>
+</wpml-config>

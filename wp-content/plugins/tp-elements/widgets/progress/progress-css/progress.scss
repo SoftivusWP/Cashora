@@ -1,0 +1,80 @@
+@import '../../../scss/base';
+.rs-skill-bar {
+    .skillbar {
+        background: #eeeeee;
+        display: inline-block;
+        height: 6px;
+        position: relative;
+        width: 100%;
+
+        .skillbar-bar {
+            background: var(--hoverColor);
+            height: 8px;
+            width: 0;
+            margin-bottom: 0;
+        }
+
+        .skillbar-title,
+        .skill-bar-percent {
+            position: absolute;
+        }
+
+        .skillbar-title {
+            color: #212121;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .skill-bar-percent {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--titleColor);
+        }
+    }
+
+    &.animation,
+    &.striped {
+        .skillbar .skillbar-bar {
+            background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+            background-size: 1rem 1rem;
+        }
+    }
+
+    &.animation {
+        .skillbar .skillbar-bar {
+            -webkit-animation: rs-progress-pie-stripes 1s linear infinite;
+            animation: rs-progress-pie-stripes 1s linear infinite;
+
+        }
+    }
+
+    &.style1 {
+        .skillbar {
+            .skillbar-title {
+                top: -20px;
+            }
+
+            .skill-bar-percent {
+                right: 0;
+                top: -20px;
+            }
+        }
+    }
+
+    &.style2 {
+        .skillbar {
+            .skillbar-title {
+                left: 0;
+                padding: 2px 20px 0;
+                top: 0;
+                width: 160px;
+                background: #83b614;
+            }
+
+            .skill-bar-percent {
+                right: 10px;
+                top: 0;
+            }
+        }
+    }
+}

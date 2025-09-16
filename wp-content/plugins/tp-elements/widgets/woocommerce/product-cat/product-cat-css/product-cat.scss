@@ -1,0 +1,58 @@
+@import '../../../../scss/base';
+
+.tp-product-cat-single {
+	min-height: 460px;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    &::before {
+        content: "";
+        position: absolute;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 55%, #000 100%);
+        width: 100% !important;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    .tp-product-cat-content {
+        padding: 35px;
+        position: relative;
+        z-index: 1;
+        margin-bottom: -35px;
+        transition: all 0.5s linear 0s;
+        .tp-product-cat-title {
+            margin-bottom: 0;
+            a {
+                color: #fff;
+                &:hover {
+                    color: var(--primaryColor);
+                }
+            }
+        }
+        .tp-product-cat-btn {
+            opacity: 0;
+            visibility: hidden;
+            margin-top: 7px;
+            transition: all 0.5s linear 0s;
+            display: block;
+            color: #fff;
+        }
+    }
+    &:hover {
+        .tp-product-cat-content { 
+            margin-bottom: 0;
+        }
+        .tp-product-cat-btn {
+            opacity: 1;
+            visibility: visible;
+            margin-top: 10px;
+            &:hover {
+                color: var(--primaryColor);
+            }
+        }
+    }
+}

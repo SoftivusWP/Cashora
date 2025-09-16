@@ -1,0 +1,109 @@
+:root {
+  --primaryColor: var(--primaryColor);
+  --secondaryColor: var(--primaryColor);
+}
+
+/** Counter up CSS ----------------------
+----------------------------------------*/
+.counter-top-area.yes .rs-counter-list .count-text .rs-counter {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.counter-top-area {
+  position: relative;
+}
+.counter-top-area .tps-counter-list .counter-icon {
+  display: inline-block;
+}
+.counter-top-area .tps-counter-list .counter-icon i {
+  font-size: 50px;
+  color: #dcdcdc;
+  line-height: 60px;
+  transition: all 0.3s ease 0s;
+}
+.counter-top-area .tps-counter-list .count-text .rs-counter {
+  font-size: 50px;
+  color: #BB0B0B;
+  line-height: 60px;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+}
+.counter-top-area .tps-counter-list .count-text .title {
+  font-size: 18px;
+  color: #666;
+  line-height: 18px;
+  transition: all 0.3s ease 0s;
+  display: inline-block;
+}
+.counter-top-area.style1 {
+  text-align: center;
+}
+.counter-top-area.style1 .count-number span {
+  padding: 10px 0px 10px 0px;
+}
+.counter-top-area.style2 {
+  padding: 50px;
+  border: 1px solid #E9E9E9;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.3s;
+  height: 100%;
+}
+.counter-top-area.style2 .tps-counter-list {
+  display: flex;
+  align-items: center;
+}
+.counter-top-area.style2 .tps-counter-list .counter-icon {
+  position: absolute;
+}
+.counter-top-area.style2 .tps-counter-list .count-text {
+  width: 100%;
+}
+.counter-top-area.style2 .tps-counter-list .count-text .count-number {
+  border-bottom: 1px solid #E9E9E9;
+  transition: 0.3s;
+}
+.counter-top-area.style2:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 250px;
+  width: 250px;
+  background: #BB0B0B;
+  border-radius: 50%;
+  filter: blur(50px);
+  z-index: -1;
+  top: -30%;
+  left: -10%;
+  transition: 0.3s;
+  opacity: 0;
+}
+.counter-top-area.style2:hover {
+  border-color: #BB0B0B;
+}
+.counter-top-area.style2:hover .tps-counter-list .count-text .count-number {
+  border-color: #BB0B0B;
+}
+.counter-top-area.style2:hover:after {
+  opacity: 0.5;
+}
+.counter-top-area.style3 .tps-counter-list .tps-counter-list-inner {
+  display: flex;
+  align-items: center;
+}
+.counter-top-area.style3 .tps-counter-list .tps-counter-list-inner .counter-icon img {
+  width: 80px;
+  height: 80px;
+  padding: 20px;
+  overflow: visible;
+  border-radius: 50%;
+}
+.counter-top-area.style3 .tps-counter-list .text {
+  font-weight: 400;
+  line-height: 26px;
+  margin-top: 17px;
+}/*# sourceMappingURL=counter.css.map */

@@ -1,0 +1,107 @@
+:root {
+  --primaryColor: var(--primaryColor);
+  --secondaryColor: #090908;
+}
+
+:root {
+  --body-font: "Raleway", sans-serif;
+  --transition: all 0.5s ease-in-out;
+  --transition-sec: all 1.8s ease-in-out;
+  --transition-third: all 2.2s ease-in-out;
+  /* Color styles */
+  --p1: 249, 93, 0;
+  --p2: 9, 9, 8;
+  --s1: 255, 255, 255;
+  --s2: 58, 56, 54;
+  --n1: 245, 245, 245;
+  --n2: 230, 229, 229;
+  --n3: 236, 232, 227;
+  --gradient-p1: linear-gradient(90deg, rgba(255, 222, 159, 0.47) 0%, rgba(255, 222, 159, 0.12) 51.11%, rgba(255, 222, 159, 0.00) 100%);
+  --box-shadow-p1: 0px 6px 30px 0px rgba(0, 0, 0, 0.08);
+}
+
+@keyframes waves {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+@keyframes fadeIn2nd {
+  0% {
+    opacity: 0;
+    transform: translate3d(-10%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+.before-after-slider {
+  --position: 50%;
+}
+.before-after-slider .slider-input {
+  inset: 0;
+  cursor: pointer;
+}
+.before-after-slider .slider-line {
+  inset: 0;
+  width: 6px;
+  left: var(--position);
+  transform: translateX(-50%);
+}
+.before-after-slider .slider-button {
+  width: 50px;
+  min-width: 50px;
+  height: 50px;
+  left: var(--position);
+  transform: translate(-50%, -50%);
+}
+.before-after-slider .image-content {
+  aspect-ratio: 1/1;
+}
+.before-after-slider .image-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+}
+.before-after-slider .image-content .image-before {
+  position: absolute;
+  inset: 0;
+  width: var(--position);
+}
+
+.top-50 {
+  top: 50% !important;
+}
+
+/*# sourceMappingURL=before-after.css.map */

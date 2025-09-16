@@ -1,0 +1,1232 @@
+# Copyright (C) 2021 Cashback Tracker Pro
+# This file is distributed under the same license as the Cashback Tracker Pro package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Cashback Tracker Pro 1.8.2\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/cashback-tracker\n"
+"POT-Creation-Date: 2021-08-01 15:58:30+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2021-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: application/Autoupdate.php:86
+msgid "New version of %s plugin."
+msgstr ""
+
+#: application/Autoupdate.php:87
+msgid ""
+"Please <a target=\"_blank\" href=\"%s\">find here</a> the releases notes."
+msgstr ""
+
+#: application/WooTracking.php:71
+msgid "Plus %s Cash Back"
+msgstr ""
+
+#: application/admin/AdminNotice.php:27
+msgid "License can not be deactivated."
+msgstr ""
+
+#: application/admin/AdminNotice.php:27
+msgid "Please <a href=\"%s\" target=\"_blank\">contact</a> our support team."
+msgstr ""
+
+#: application/admin/AdminNotice.php:28
+msgid "License has been deactivated on this site."
+msgstr ""
+
+#: application/admin/AdminNotice.php:28
+msgid ""
+"You must deactivate and delete %s plugin from the current site to be able to "
+"activate it on another one."
+msgstr ""
+
+#: application/admin/AdminNotice.php:29
+msgid "Loading of orders is done."
+msgstr ""
+
+#: application/admin/AdminNotice.php:30
+msgid "Advertisers are scheduled to load in the background."
+msgstr ""
+
+#: application/admin/AdminNotice.php:31
+msgid "Loading of advertisers is done."
+msgstr ""
+
+#: application/admin/AdminNotice.php:32
+msgid "An error occurred while creating advertiser page."
+msgstr ""
+
+#: application/admin/AdminNotice.php:33
+msgid "The creation of all pages is complete."
+msgstr ""
+
+#: application/admin/AdvertiserController.php:41
+#: application/admin/views/advertiser_index.php:18
+msgid "Advertisers"
+msgstr ""
+
+#: application/admin/AdvertiserTable.php:30
+#: application/admin/ShopMetabox.php:29
+msgid "Module ID"
+msgstr ""
+
+#: application/admin/AdvertiserTable.php:31
+msgid "Adv. ID"
+msgstr ""
+
+#: application/admin/AdvertiserTable.php:32
+#: application/admin/ShopMetabox.php:52
+msgid "Name"
+msgstr ""
+
+#: application/admin/AdvertiserTable.php:33
+#: application/admin/ShopMetabox.php:58
+msgid "Domain"
+msgstr ""
+
+#: application/admin/AdvertiserTable.php:34
+#: application/bridges/mycred/MycredBridge.php:153
+#: application/bridges/mycred/MycredBridge.php:168
+#: application/bridges/mycred/MycredHelper.php:101
+#: application/components/AdvertiserPageManager.php:91
+#: templates/single-cashback-shop.php:44
+msgid "Cashback"
+msgstr ""
+
+#: application/admin/AdvertiserTable.php:35 application/admin/OrderTable.php:39
+msgid "Commission"
+msgstr ""
+
+#: application/admin/AdvertiserTable.php:36
+msgid "Currency"
+msgstr ""
+
+#: application/admin/AdvertiserTable.php:37
+#: application/admin/ShopMetabox.php:71
+msgid "Validation days"
+msgstr ""
+
+#: application/admin/AdvertiserTable.php:38
+#: application/admin/CouponConfig.php:36
+#: application/admin/views/settings.php:39
+msgid "Coupons"
+msgstr ""
+
+#: application/admin/AdvertiserTable.php:82
+msgid "Page ID: %d"
+msgstr ""
+
+#: application/admin/AdvertiserTable.php:83
+msgid "Edit"
+msgstr ""
+
+#: application/admin/AdvertiserTable.php:84
+msgid "View"
+msgstr ""
+
+#: application/admin/AdvertiserTable.php:92
+msgid "Create page"
+msgstr ""
+
+#: application/admin/CouponConfig.php:31
+#: application/admin/views/settings.php:71
+msgid "Coupon settings"
+msgstr ""
+
+#: application/admin/CouponConfig.php:43
+msgid "Coupons import"
+msgstr ""
+
+#: application/admin/CouponConfig.php:44
+msgid "Import coupons to advertiser pages."
+msgstr ""
+
+#: application/admin/CouponConfig.php:47 application/admin/GeneralConfig.php:47
+msgid "Enabled"
+msgstr ""
+
+#: application/admin/CouponConfig.php:48 application/admin/GeneralConfig.php:48
+msgid "Disabled"
+msgstr ""
+
+#: application/admin/CouponConfig.php:56
+msgid "At the end of the post"
+msgstr ""
+
+#: application/admin/CouponConfig.php:57
+msgid "At the beginning of the post"
+msgstr ""
+
+#: application/admin/CouponConfig.php:72
+msgid "The field \"%s\" can not be more than %d."
+msgstr ""
+
+#: application/admin/CouponConfig.php:77
+msgid "Button color"
+msgstr ""
+
+#: application/admin/CouponConfig.php:85
+msgid "Button text coupons"
+msgstr ""
+
+#: application/admin/CouponConfig.php:94
+msgid "Button text deals"
+msgstr ""
+
+#: application/admin/CouponConfig.php:103
+msgid "Expiration date"
+msgstr ""
+
+#: application/admin/CouponConfig.php:104
+msgid "Show expiration date"
+msgstr ""
+
+#: application/admin/CouponConfig.php:110
+msgid "Description"
+msgstr ""
+
+#: application/admin/CouponConfig.php:111
+msgid "Show description"
+msgstr ""
+
+#: application/admin/EnvatoConfig.php:28
+msgid ""
+"This Email will be used for license on your plugin. After activation, you "
+"will get email with login data for <a target=\"_blank\" href=\"%s\">user "
+"panel</a>, where you can control your licenses."
+msgstr ""
+
+#: application/admin/EnvatoConfig.php:35 application/modules/Cj/CjConfig.php:45
+msgid "The field  \"%s\" can not be empty"
+msgstr ""
+
+#: application/admin/EnvatoConfig.php:39 application/admin/EnvatoConfig.php:57
+#: application/admin/GeneralConfig.php:108
+msgid "Field \"%s\" filled with wrong data."
+msgstr ""
+
+#: application/admin/EnvatoConfig.php:46
+msgid "Where to find?"
+msgstr ""
+
+#: application/admin/EnvatoConfig.php:53 application/admin/LicConfig.php:52
+#: application/modules/Admitad/AdmitadConfig.php:32
+#: application/modules/Admitad/AdmitadConfig.php:46
+#: application/modules/Admitad/AdmitadConfig.php:59
+#: application/modules/Awin/AwinConfig.php:31
+#: application/modules/Awin/AwinConfig.php:45
+#: application/modules/Cj/CjConfig.php:31
+#: application/modules/Cuelinks/CuelinksConfig.php:31
+#: application/modules/Cuelinks/CuelinksConfig.php:45
+msgid "The field \"%s\" can not be empty."
+msgstr ""
+
+#: application/admin/EnvatoConfig.php:61
+msgid "Plugin cannot be activated!"
+msgstr ""
+
+#: application/admin/EnvatoConfig.php:67
+msgid "I would like to be contacted with the latest project news and offers."
+msgstr ""
+
+#: application/admin/EnvatoConfig.php:73
+msgid "Error."
+msgstr ""
+
+#: application/admin/GeneralConfig.php:31
+#: application/admin/views/settings.php:35
+#: application/admin/views/settings.php:69
+msgid "General settings"
+msgstr ""
+
+#: application/admin/GeneralConfig.php:36
+msgid "Settings"
+msgstr ""
+
+#: application/admin/GeneralConfig.php:43
+msgid "myCRED integration"
+msgstr ""
+
+#: application/admin/GeneralConfig.php:44
+msgid "Integration with <a target=\"_blank\" href=\"%s\">myCRED plugin</a>."
+msgstr ""
+
+#: application/admin/GeneralConfig.php:53
+msgid "Automatically check"
+msgstr ""
+
+#: application/admin/GeneralConfig.php:54
+msgid "Select how often to download orders from affiliate networks."
+msgstr ""
+
+#: application/admin/GeneralConfig.php:57
+msgid "Never"
+msgstr ""
+
+#: application/admin/GeneralConfig.php:58
+msgid "Every hour"
+msgstr ""
+
+#: application/admin/GeneralConfig.php:59
+msgid "Every two hours"
+msgstr ""
+
+#: application/admin/GeneralConfig.php:60
+msgid "Every six hours"
+msgstr ""
+
+#: application/admin/GeneralConfig.php:61
+msgid "Every twelve hours"
+msgstr ""
+
+#: application/admin/GeneralConfig.php:62
+msgid "Every day"
+msgstr ""
+
+#: application/admin/GeneralConfig.php:67
+msgid "Email alerts"
+msgstr ""
+
+#: application/admin/GeneralConfig.php:68
+msgid ""
+"This options allows you to specify which types of alerts you want to receive "
+"to admin email."
+msgstr ""
+
+#: application/admin/GeneralConfig.php:71
+msgid "Errors only"
+msgstr ""
+
+#: application/admin/GeneralConfig.php:72
+msgid "Warnings and Errors only"
+msgstr ""
+
+#: application/admin/GeneralConfig.php:73
+#: application/admin/GeneralConfig.php:83 application/admin/LogTable.php:107
+#: application/admin/OrderTable.php:196
+msgid "All"
+msgstr ""
+
+#: application/admin/GeneralConfig.php:74
+msgid "None"
+msgstr ""
+
+#: application/admin/GeneralConfig.php:79
+msgid "Log alerts"
+msgstr ""
+
+#: application/admin/GeneralConfig.php:80
+msgid ""
+"This options allows you to specify which types of alerts you want to log to "
+"DB."
+msgstr ""
+
+#: application/admin/GeneralConfig.php:84
+msgid "All without debug"
+msgstr ""
+
+#: application/admin/GeneralConfig.php:89
+msgid "From Name"
+msgstr ""
+
+#: application/admin/GeneralConfig.php:90
+msgid ""
+"This name will appear in the From Name column of emails sent from the plugin."
+msgstr ""
+
+#: application/admin/GeneralConfig.php:99
+msgid "From Email"
+msgstr ""
+
+#: application/admin/GeneralConfig.php:100
+msgid "Customize the From Email address."
+msgstr ""
+
+#: application/admin/GeneralConfig.php:100
+msgid ""
+"To avoid your email being marked as spam, it is recommended your \"from\" "
+"match your website."
+msgstr ""
+
+#: application/admin/GeneralConfig.php:113
+msgid "Main color"
+msgstr ""
+
+#: application/admin/GeneralConfig.php:114
+msgid "This color will be used for some graphic elements on frontend part."
+msgstr ""
+
+#: application/admin/GeneralConfig.php:122
+msgid "Status of advertiser page"
+msgstr ""
+
+#: application/admin/GeneralConfig.php:123
+msgid "Default status for automatically generated pages."
+msgstr ""
+
+#: application/admin/GeneralConfig.php:126
+msgid "Publish"
+msgstr ""
+
+#: application/admin/GeneralConfig.php:127 application/models/OrderModel.php:74
+msgid "Pending"
+msgstr ""
+
+#: application/admin/GeneralConfig.php:132
+msgid "Title of advertiser page"
+msgstr ""
+
+#: application/admin/GeneralConfig.php:133
+msgid "Default title for automatically generated pages."
+msgstr ""
+
+#: application/admin/GeneralConfig.php:134
+msgid "You can use tags: %s."
+msgstr ""
+
+#: application/admin/GeneralConfig.php:143
+msgid "Plugin CSS"
+msgstr ""
+
+#: application/admin/GeneralConfig.php:144
+msgid "Dequeue plugin style."
+msgstr ""
+
+#: application/admin/GeneralConfig.php:145
+msgid ""
+"You can disable default CSS if you use your own custom templates and styles."
+msgstr ""
+
+#: application/admin/GeneralConfig.php:151
+msgid "Registration URL"
+msgstr ""
+
+#: application/admin/GeneralConfig.php:152
+msgid ""
+"Add custom link if you want to use custom register page for \"Go to shop\" "
+"button."
+msgstr ""
+
+#: application/admin/GeneralConfig.php:161
+msgid "\"Go to shop\" button class"
+msgstr ""
+
+#: application/admin/GeneralConfig.php:162
+msgid ""
+"Add custom class to \"Go to shop\" button. In this way, you can trigger "
+"login popup if your theme supports such feature."
+msgstr ""
+
+#: application/admin/GeneralConfig.php:171
+msgid "Author ID"
+msgstr ""
+
+#: application/admin/GeneralConfig.php:172
+msgid "Use Author ID instead of User ID in tracking links."
+msgstr ""
+
+#: application/admin/GeneralConfig.php:174
+msgid ""
+"In some cases, you may need to give commission to author of post and not to "
+"users."
+msgstr ""
+
+#: application/admin/GeneralConfig.php:175
+msgid "Read more <a target=\"_bklanl\" href=\"%s\">here</a>."
+msgstr ""
+
+#: application/admin/GeneralConfig.php:182
+msgid "WooCommerce tracking"
+msgstr ""
+
+#: application/admin/GeneralConfig.php:183
+msgid "Convert all WooCommerce external links to tracking links automatically."
+msgstr ""
+
+#: application/admin/GeneralConfig.php:189
+msgid "WooCommerce notice"
+msgstr ""
+
+#: application/admin/GeneralConfig.php:190
+msgid "Show cashback notice for WooCommerce products."
+msgstr ""
+
+#: application/admin/LicConfig.php:37
+msgid "License"
+msgstr ""
+
+#: application/admin/LicConfig.php:44
+msgid "License key"
+msgstr ""
+
+#: application/admin/LicConfig.php:45
+msgid "Please enter a valid license key."
+msgstr ""
+
+#: application/admin/LicConfig.php:45
+msgid "You can find your key on the %s page."
+msgstr ""
+
+#: application/admin/LicConfig.php:56
+msgid "Invalid License key."
+msgstr ""
+
+#: application/admin/LicConfig.php:60
+msgid "License key is not accepted."
+msgstr ""
+
+#: application/admin/LicConfig.php:60
+msgid "Please try again."
+msgstr ""
+
+#: application/admin/LicConfig.php:60
+msgid ""
+"If you are still having trouble with your License key please <a href=\"%s\" "
+"target=\"_blank\">contact</a> our support team."
+msgstr ""
+
+#: application/admin/LogController.php:31
+#: application/admin/views/log_index.php:4
+msgid "Logs"
+msgstr ""
+
+#: application/admin/MyListTable.php:110
+msgid "ago"
+msgstr ""
+
+#: application/admin/MyListTable.php:137
+msgid "Delete"
+msgstr ""
+
+#: application/admin/OrderController.php:42
+#: application/admin/views/order_index.php:4
+msgid "Orders"
+msgstr ""
+
+#: application/admin/OrderTable.php:29
+msgid "ID"
+msgstr ""
+
+#: application/admin/OrderTable.php:32
+msgid "User"
+msgstr ""
+
+#: application/admin/OrderTable.php:33
+msgid "Order ID (network)"
+msgstr ""
+
+#: application/admin/OrderTable.php:34
+msgid "Order ID (merchant)"
+msgstr ""
+
+#: application/admin/OrderTable.php:35
+msgid "Module"
+msgstr ""
+
+#: application/admin/OrderTable.php:36
+msgid "Advertiser"
+msgstr ""
+
+#: application/admin/OrderTable.php:37 application/admin/OrderUserTable.php:33
+msgid "Status"
+msgstr ""
+
+#: application/admin/OrderTable.php:38 application/admin/OrderUserTable.php:34
+msgid "Sale amount"
+msgstr ""
+
+#: application/admin/OrderTable.php:47
+msgid "Not found"
+msgstr ""
+
+#: application/admin/OrderTable.php:127
+msgid "Filter"
+msgstr ""
+
+#: application/admin/OrderTable.php:137
+msgid "Filter by module"
+msgstr ""
+
+#: application/admin/OrderUserController.php:45
+msgid "My orders"
+msgstr ""
+
+#: application/admin/OrderUserTable.php:29 application/models/OrderModel.php:66
+msgid "Order ID"
+msgstr ""
+
+#: application/admin/OrderUserTable.php:30
+msgid "Merchant"
+msgstr ""
+
+#: application/admin/ShopMetabox.php:30 application/admin/ShopMetabox.php:41
+msgid ""
+"Set this parameter if you want to bind this page to a specific advertiser."
+msgstr ""
+
+#: application/admin/ShopMetabox.php:30
+msgid "Example: Admitad or Awin."
+msgstr ""
+
+#: application/admin/ShopMetabox.php:36
+msgid "- select module -"
+msgstr ""
+
+#: application/admin/ShopMetabox.php:40
+msgid "Advertiser ID"
+msgstr ""
+
+#: application/admin/ShopMetabox.php:41
+msgid "Example: 6115."
+msgstr ""
+
+#: application/admin/ShopMetabox.php:53
+msgid "Advertiser name."
+msgstr ""
+
+#: application/admin/ShopMetabox.php:59
+msgid "Advertiser domain."
+msgstr ""
+
+#: application/admin/ShopMetabox.php:65
+msgid "Cashback notice"
+msgstr ""
+
+#: application/admin/ShopMetabox.php:66
+msgid "Example: Up to 15% or $1-$5."
+msgstr ""
+
+#: application/admin/ShopMetabox.php:72
+msgid "Average order validation time."
+msgstr ""
+
+#: application/admin/ShopMetabox.php:83
+msgid "Sidebar area"
+msgstr ""
+
+#: application/admin/ShopMetabox.php:84
+msgid "This is additional custom area for sidebar."
+msgstr ""
+
+#: application/admin/ShopMetabox.php:85
+msgid "You can use HTML tags here."
+msgstr ""
+
+#: application/admin/ShopMetabox.php:97
+msgid "Shop Info"
+msgstr ""
+
+#: application/admin/views/advertiser_index.php:3
+#: application/admin/views/settings.php:10
+msgid "Working... Please wait..."
+msgstr ""
+
+#: application/admin/views/advertiser_index.php:20
+msgid "Refresh all advertisers"
+msgstr ""
+
+#: application/admin/views/advertiser_index.php:24
+msgid "Create all pages"
+msgstr ""
+
+#: application/admin/views/envato_activation.php:4
+msgid "%s activation"
+msgstr ""
+
+#: application/admin/views/envato_activation.php:8
+msgid ""
+"In order to receive all benefits of %s, you need to activate your copy of "
+"the plugin."
+msgstr ""
+
+#: application/admin/views/envato_activation.php:9
+msgid ""
+"By activating %s license you will unlock premium options - direct plugin "
+"updates, access to user panel and official support."
+msgstr ""
+
+#: application/admin/views/lic_settings.php:4
+msgid "%s license"
+msgstr ""
+
+#: application/admin/views/lic_settings.php:12
+msgid "Activate license"
+msgstr ""
+
+#: application/admin/views/lic_settings.php:16
+#: application/admin/views/lic_settings.php:23
+msgid "Deactivate license"
+msgstr ""
+
+#: application/admin/views/lic_settings.php:17
+msgid "You can transfer your license to another domain."
+msgstr ""
+
+#: application/admin/views/order_index.php:14
+msgid "Search order"
+msgstr ""
+
+#: application/admin/views/order_user_index.php:4
+msgid "Cashback orders"
+msgstr ""
+
+#: application/admin/views/settings.php:25
+msgid "Cashback Tracker Settings"
+msgstr ""
+
+#: application/admin/views/settings.php:79
+msgid "Joined advertisers: %d as of %s"
+msgstr ""
+
+#: application/admin/views/settings.php:80
+msgid "refresh"
+msgstr ""
+
+#: application/admin/views/settings.php:83
+msgid "refresh in background"
+msgstr ""
+
+#: application/admin/views/settings.php:94
+msgid "WARNING:"
+msgstr ""
+
+#: application/admin/views/settings.php:95
+msgid "This module is deprecated."
+msgstr ""
+
+#: application/admin/views/settings.php:105
+msgid "Download orders"
+msgstr ""
+
+#: application/bridges/mycred/MycredBridge.php:65
+msgid ""
+"You have activated myCRED integration, but myCRED plugin is not installed. "
+"Please install and activate <a target=\"_blank\" href=\"%s\">myCRED</a> "
+"plugin."
+msgstr ""
+
+#: application/bridges/mycred/MycredBridge.php:74
+msgid "Order ID# %d (%d)."
+msgstr ""
+
+#: application/bridges/mycred/MycredBridge.php:77
+msgid "Unable to calculate cashback amount."
+msgstr ""
+
+#: application/bridges/mycred/MycredBridge.php:83
+msgid "Unable to determine cashback currency."
+msgstr ""
+
+#: application/bridges/mycred/MycredBridge.php:95
+msgid "Cashback transaction already exists."
+msgstr ""
+
+#: application/bridges/mycred/MycredBridge.php:102
+msgid "Cashback points added."
+msgstr ""
+
+#: application/bridges/mycred/MycredBridge.php:105
+msgid "Cashback for Order ID# %s, %s."
+msgstr ""
+
+#: application/bridges/mycred/MycredBridge.php:128
+msgid "The order status has been changed from %s to %s."
+msgstr ""
+
+#: application/bridges/mycred/MycredBridge.php:129
+msgid "Order ID# %s, %s."
+msgstr ""
+
+#: application/components/CashbackmoduleConfig.php:24
+msgid "Enable network"
+msgstr ""
+
+#: application/components/CashbackmoduleConfig.php:36
+msgid "Default cashback"
+msgstr ""
+
+#: application/components/CashbackmoduleConfig.php:44
+msgid "Cashback by advertisers"
+msgstr ""
+
+#: application/components/CashbackmoduleConfig.php:99
+msgid "not found"
+msgstr ""
+
+#: application/components/CashbackmoduleConfig.php:101
+msgid "add new"
+msgstr ""
+
+#: application/components/CashbackmoduleConfig.php:110
+msgid "Percentage of sale amount"
+msgstr ""
+
+#: application/components/CashbackmoduleConfig.php:111
+msgid "Percentage of my commission"
+msgstr ""
+
+#: application/components/CashbackmoduleConfig.php:112
+msgid "Flat amount"
+msgstr ""
+
+#: application/components/CouponManager.php:59
+msgid "%s coupons has been updated."
+msgstr ""
+
+#: application/components/CouponManager.php:60
+msgid "Found coupons: %d."
+msgstr ""
+
+#: application/components/LManager.php:137
+msgid "License status: <span class=\"cbtrkr-label cbtrkr-label-%s\">%s</span>."
+msgstr ""
+
+#: application/components/LManager.php:139
+msgid "You are receiving automatic updates."
+msgstr ""
+
+#: application/components/LManager.php:140
+msgid "Expires at %s (%d days left)."
+msgstr ""
+
+#: application/components/LManager.php:145
+#: application/components/LManager.php:173
+msgid "Extend now"
+msgstr ""
+
+#: application/components/LManager.php:147
+#: application/components/LManager.php:175
+msgid "with a %d%% discount"
+msgstr ""
+
+#: application/components/LManager.php:165
+#: application/components/LManager.php:193
+msgid "Dismiss"
+msgstr ""
+
+#: application/components/LManager.php:167
+msgid "License expires soon"
+msgstr ""
+
+#: application/components/LManager.php:168
+msgid "Your %s license expires at %s (%d days left)."
+msgstr ""
+
+#: application/components/LManager.php:169
+msgid ""
+"You will not receive automatic updates, bug fixes, and technical support."
+msgstr ""
+
+#: application/components/LManager.php:196
+msgid "License expired"
+msgstr ""
+
+#: application/components/LManager.php:197
+msgid "Your %s license expired on %s."
+msgstr ""
+
+#: application/components/LManager.php:198
+msgid ""
+"You are not receiving automatic updates, bug fixes, and technical support."
+msgstr ""
+
+#: application/components/LManager.php:202
+msgid "Renew now"
+msgstr ""
+
+#: application/components/LManager.php:210
+msgid "License mismatch"
+msgstr ""
+
+#: application/components/LManager.php:211
+msgid "Your %s license doesn't match your current domain."
+msgstr ""
+
+#: application/components/LManager.php:212
+msgid ""
+"If you wish to continue using the plugin then you must <a target=\"_blank\" "
+"href=\"%s\">revoke</a> the license and then <a href=\"%s\">reactivate</a> it "
+"again or <a target=\"_blank\" href=\"%s\">buy a new license</a>."
+msgstr ""
+
+#: application/components/LManager.php:221
+msgid "Check again"
+msgstr ""
+
+#: application/components/ModuleConfig.php:61
+#: application/components/ModuleConfig.php:67
+msgid "settings"
+msgstr ""
+
+#: application/components/OrderManager.php:77
+msgid "%s orders has been loaded successfully."
+msgstr ""
+
+#: application/components/OrderManager.php:80
+msgid "Start date: %s."
+msgstr ""
+
+#: application/components/OrderManager.php:82
+msgid "Found cashback orders: %d."
+msgstr ""
+
+#: application/components/OrderManager.php:90
+msgid "Wrong formatted order."
+msgstr ""
+
+#: application/components/OrderManager.php:106
+msgid "User not found."
+msgstr ""
+
+#: application/components/OrderManager.php:144
+msgid "Sale amount/commission amount has been updated."
+msgstr ""
+
+#: application/components/OrderManager.php:158
+msgid "New order has been added."
+msgstr ""
+
+#: application/components/OrderManager.php:170
+msgid "Order status has been updated."
+msgstr ""
+
+#: application/components/OrderManager.php:190
+msgid "Network: %s."
+msgstr ""
+
+#: application/components/OrderManager.php:192
+msgid "Advertiser: %s."
+msgstr ""
+
+#: application/components/OrderManager.php:194
+msgid "Order ID# %s (%s)."
+msgstr ""
+
+#: application/components/OrderManager.php:198
+msgid "User ID# %d."
+msgstr ""
+
+#: application/components/OrderManager.php:200
+msgid "Status: %s."
+msgstr ""
+
+#: application/components/ShopPostType.php:31
+msgid "Add New Shop"
+msgstr ""
+
+#: application/components/ShopPostType.php:32
+msgid "New Shop"
+msgstr ""
+
+#: application/components/ShopPostType.php:33
+msgid "Edit Shop"
+msgstr ""
+
+#: application/components/ShopPostType.php:34
+msgid "View Shop"
+msgstr ""
+
+#: application/components/ShopPostType.php:35
+msgid "All shops"
+msgstr ""
+
+#: application/components/ShopPostType.php:36
+msgid "Search shops"
+msgstr ""
+
+#: application/components/ShopPostType.php:37
+msgid "No cashback shops found."
+msgstr ""
+
+#: application/components/ShopPostType.php:38
+msgid "No cashback shops found in Trash."
+msgstr ""
+
+#: application/components/ShopPostType.php:44
+msgid "Cashback shops"
+msgstr ""
+
+#: application/components/ShopTaxonomy.php:26
+msgid "Shop categories"
+msgstr ""
+
+#: application/components/ShopTaxonomy.php:27
+msgid "All Categories"
+msgstr ""
+
+#: application/components/ShopTaxonomy.php:28
+msgid "Parent Item"
+msgstr ""
+
+#: application/components/ShopTaxonomy.php:29
+msgid "Parent Item:"
+msgstr ""
+
+#: application/components/ShopTaxonomy.php:30
+msgid "New Item Name"
+msgstr ""
+
+#: application/components/ShopTaxonomy.php:31
+msgid "Add New Item"
+msgstr ""
+
+#: application/components/ShopTaxonomy.php:32
+msgid "Edit Item"
+msgstr ""
+
+#: application/components/ShopTaxonomy.php:33
+msgid "Update Item"
+msgstr ""
+
+#: application/components/ShopTaxonomy.php:34
+msgid "View Item"
+msgstr ""
+
+#: application/components/ShopTaxonomy.php:35
+msgid "Separate items with commas"
+msgstr ""
+
+#: application/components/ShopTaxonomy.php:36
+msgid "Add or remove items"
+msgstr ""
+
+#: application/components/ShopTaxonomy.php:37
+msgid "Choose from the most used"
+msgstr ""
+
+#: application/components/ShopTaxonomy.php:38
+msgid "Popular Items"
+msgstr ""
+
+#: application/components/ShopTaxonomy.php:39
+msgid "Search Items"
+msgstr ""
+
+#: application/components/ShopTaxonomy.php:40
+msgid "Not Found"
+msgstr ""
+
+#: application/components/ShopTaxonomy.php:41
+msgid "Items list"
+msgstr ""
+
+#: application/components/ShopTaxonomy.php:42
+msgid "Items list navigation"
+msgstr ""
+
+#: application/components/logger/EmailTarget.php:28
+msgid "alerts"
+msgstr ""
+
+#: application/helpers/TemplateHelper.php:99
+msgid "SHOW CODE"
+msgstr ""
+
+#: application/helpers/TemplateHelper.php:111
+msgid "GET DEAL"
+msgstr ""
+
+#: application/models/LogModel.php:47
+msgid "Level"
+msgstr ""
+
+#: application/models/LogModel.php:48
+msgid "Time"
+msgstr ""
+
+#: application/models/LogModel.php:49
+msgid "Message"
+msgstr ""
+
+#: application/models/OrderModel.php:65
+msgid "User ID"
+msgstr ""
+
+#: application/models/OrderModel.php:67
+msgid "Network ID"
+msgstr ""
+
+#: application/models/OrderModel.php:75
+msgid "Approved"
+msgstr ""
+
+#: application/models/OrderModel.php:76
+msgid "Declined"
+msgstr ""
+
+#: application/modules/Admitad/AdmitadConfig.php:24
+msgid "Your <a target=\"_blank\" href=\"%s\">Admitad</a> Client ID."
+msgstr ""
+
+#: application/modules/Admitad/AdmitadConfig.php:38
+msgid "Your <a target=\"_blank\" href=\"%s\">Admitad</a> Client Secret."
+msgstr ""
+
+#: application/modules/Admitad/AdmitadConfig.php:64
+msgid "Approved but stalled"
+msgstr ""
+
+#: application/modules/Admitad/AdmitadConfig.php:65
+msgid "Applay the selected status for \"Approved but stalled\" orders."
+msgstr ""
+
+#: application/modules/Admitad/AdmitadConfig.php:68
+#: application/modules/Cj/CjConfig.php:69
+#: application/modules/Cuelinks/CuelinksConfig.php:54
+msgid "Apply Approved status"
+msgstr ""
+
+#: application/modules/Admitad/AdmitadConfig.php:69
+#: application/modules/Cj/CjConfig.php:70
+#: application/modules/Cuelinks/CuelinksConfig.php:55
+msgid "Apply Pending status"
+msgstr ""
+
+#: application/modules/Awin/AwinConfig.php:23
+msgid "Your publisher ID."
+msgstr ""
+
+#: application/modules/Awin/AwinConfig.php:37
+msgid ""
+"Your can find your Access Token <a target=\"_blank\" href=\"%s\">here</a>."
+msgstr ""
+
+#: application/modules/Awin/AwinConfig.php:51
+msgid "Required to import coupons."
+msgstr ""
+
+#: application/modules/Awin/AwinConfig.php:52
+msgid "Go to Toolbox > Promotional > My Offers and find Offers download URL."
+msgstr ""
+
+#: application/modules/Awin/AwinConfig.php:59
+msgid "The \"%s\" field must be a valid URL."
+msgstr ""
+
+#: application/modules/Cj/CjConfig.php:23
+msgid ""
+"A Personal Access Token is a unique identification string for your account."
+msgstr ""
+
+#: application/modules/Cj/CjConfig.php:23
+msgid "You can get it <a target=\"_blank\" href=\"%s\">here</a>."
+msgstr ""
+
+#: application/modules/Cj/CjConfig.php:37
+msgid ""
+"CID or Company ID is your account number. This number is located on the top "
+"right side of your screen next to your name."
+msgstr ""
+
+#: application/modules/Cj/CjConfig.php:51
+msgid ""
+"PID, also known as your Publisher Website ID. To find your PID, navigate to "
+"your Account tab -> Site Settings."
+msgstr ""
+
+#: application/modules/Cj/CjConfig.php:64
+msgid "Locked orders"
+msgstr ""
+
+#: application/modules/Cj/CjConfig.php:65
+msgid "Applay the selected status for \"Loked\" orders."
+msgstr ""
+
+#: application/modules/Cj/CjConfig.php:66
+msgid ""
+"In the standard transaction lifecycle, transactions lock at 2am PST on the "
+"11th of each month. Once a transaction has a status of locked, advertiser "
+"can no longer correct or extend it - it has moved into the publisher payout "
+"cycle."
+msgstr ""
+
+#: application/modules/Cuelinks/CuelinksConfig.php:23
+msgid ""
+"Cuelinks uses a custom header containing an API key to identify your "
+"requests."
+msgstr ""
+
+#: application/modules/Cuelinks/CuelinksConfig.php:23
+msgid "Request for an API Key at %s."
+msgstr ""
+
+#: application/modules/Cuelinks/CuelinksConfig.php:37
+msgid ""
+"Go to your CueLinks dashboard - Account - My Channels and find your Channel "
+"ID."
+msgstr ""
+
+#: application/modules/Cuelinks/CuelinksConfig.php:50
+msgid "Validated orders"
+msgstr ""
+
+#: application/modules/Cuelinks/CuelinksConfig.php:51
+msgid "Applay the selected status for \"Validated\" orders."
+msgstr ""
+
+#: application/modules/Cuelinks/CuelinksConfig.php:51
+msgid "<a target=\"_blank\" href=\"%s\">Read more...</a>"
+msgstr ""
+
+#: application/modules/Demo/DemoConfig.php:23
+msgid "Demo currency"
+msgstr ""
+
+#: application/modules/Demo/DemoConfig.php:30
+msgid "Username"
+msgstr ""
+
+#: application/modules/Demo/DemoConfig.php:31
+msgid ""
+"Add orders for this user. Current user or administrator username will be "
+"used by default."
+msgstr ""
+
+#: templates/_coupon_list.php:54
+msgid "Expires on: %s"
+msgstr ""
+
+#: templates/cashback-shops-alphabet.php:63
+#: templates/cashback-shops-grid.php:22
+msgid "Cash Back"
+msgstr ""
+
+#: templates/single-cashback-shop.php:38
+msgid "%s Cash Back"
+msgstr ""
+
+#: templates/single-cashback-shop.php:39
+msgid "Go to shop"
+msgstr ""
+
+#: templates/single-cashback-shop.php:48
+msgid "Average approve time"
+msgstr ""
+
+#: templates/single-cashback-shop.php:49
+msgid "%d days"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Cashback Tracker Pro"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://www.keywordrush.com/cashbacktracker"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Plugin for creating tracking links and tracking statistic for cashback sites."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "keywordrush.com"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://www.keywordrush.com"
+msgstr ""

@@ -1,0 +1,10 @@
+@import '../../../scss/base';
+
+//Buisness hour css
+.rs-business-hour {
+    .rs-business-schedule {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px;
+    }
+}

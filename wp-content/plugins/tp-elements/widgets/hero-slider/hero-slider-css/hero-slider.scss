@@ -1,0 +1,160 @@
+@import '../../../scss/base';
+
+// banner-section
+.banner-section {
+    position: relative;
+    span.display-one {
+        display: block;
+        font-weight: 700;
+        color: #fff;
+        line-height: 1;
+        @media screen and (max-width: 767px) {
+            font-size: 48px;
+        }
+        @media screen and (max-width: 480px) {
+            font-size: 38px;
+        }
+    }
+    .cus-border.b-second {
+        margin-left: 20px;
+        @media screen and (max-width: 767px) {
+            margin-left: 0px;
+            margin-top: 20px;
+        }
+        .img-area {
+            padding-right: 30px;
+        }
+    }
+    .swiper-slide{
+        opacity: 0;
+        pointer-events: none;
+        &.swiper-slide-active{
+            opacity: 1;
+            pointer-events: initial;
+        }
+    }
+    .slide-number{
+        transform: rotate(-90deg);
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .swiper-pagination{
+        height: 100%;
+        position: relative !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .swiper-pagination-bullet{
+            position: initial !important;
+            border-radius: 0;
+            width: 2px;
+            background-color: var(--secondaryColor);
+            height: 60px;
+        }
+        .swiper-pagination-bullet-active{
+            height: 100px;
+            background-color: var(--primaryColor);
+        }
+    }
+    .new-level{
+
+    }
+    .swiper-slide-active{
+        h3, .display-ex-one{
+            margin: 0;
+        }
+    }
+    .side-menubar{
+        position: absolute;
+        right: 50px;
+        height: 60%;
+    }
+    .position-area{
+        top: 20%;
+    }
+    .circle-text{
+
+    }
+    .cmn-text {
+        opacity: 0;
+        position: absolute;
+        &.active{
+            opacity: 1;
+            position: relative;
+            &::before {
+                animation: changeWidth 4s ease-in-out;
+            }
+        }
+        @media(max-width: 767px) {
+            &::before, &.active::before {
+                content: '';
+                position: absolute;
+                height: 100%;
+                background-color: var(--primaryColor);
+                z-index: -1;
+                left: 0;
+                width: 15%;
+                border-radius: 500px;
+            }
+        }
+    }
+    @keyframes changeWidth {
+        0%, 100% { width: 15%; }
+        50% { width: 100%; }
+    }
+    .hero-image-area{
+
+    }
+    &.inner-section{
+        background-image: url(../images/classes-details-banner-bg.png);
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+        &::before{
+            content: '';
+            position: absolute;
+            background-color: var(--secondaryColor);
+            width: 100%;
+            height: 100%;
+            bottom: 0;
+            left: 0;
+        }
+    }
+}
+
+
+// Social Area 
+.social-area{
+	a{
+		transition: var(--transition);
+		border-radius: 50%;
+		border: 1px solid var(--secondaryColor);
+		background: var(--secondaryColor)
+		i{
+			transition: var(--transition);
+			color: var(--secondaryColor);
+		}
+		&:hover{
+			background: var(--primaryColor);
+			i{
+				color: var(--secondaryColor);
+			}
+		}
+	}
+	&.second{
+		i{
+			color: var(--secondaryColor);
+		}
+	}
+}
+
+.icon-area.position-absolute.end-0.tp-abs-jigjag {
+    padding-right: 235px;
+    padding-top: 40px;
+}
+.bottom-area ul {
+    list-style: none;
+    margin: 0;
+    margin-bottom: 60px;
+}

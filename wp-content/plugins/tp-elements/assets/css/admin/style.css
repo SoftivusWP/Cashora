@@ -1,0 +1,15 @@
+.tp-admin-input{
+	margin: 10px 0;
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.tp-admin-input label,
+.tp-admin-input label input{
+	width: 150px;
+}
+.tp-admin-input input{
+	width: 300px;
+}

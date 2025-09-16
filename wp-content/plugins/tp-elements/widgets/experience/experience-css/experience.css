@@ -1,0 +1,150 @@
+:root {
+  --primaryColor: var(--primaryColor);
+  --secondaryColor: #090908;
+}
+
+@keyframes waves {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+@keyframes fadeIn2nd {
+  0% {
+    opacity: 0;
+    transform: translate3d(-10%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+.circle-text {
+  width: 180px;
+  max-width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 991px) {
+  .circle-text {
+    width: 125px;
+    max-width: 125px;
+    height: 125px;
+  }
+}
+.circle-text .text {
+  animation: rotate 50s linear infinite;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.circle-text .text p {
+  transform: translate(50%, 5px);
+}
+.circle-text .text span {
+  position: absolute;
+  font-size: inherit;
+  color: inherit;
+  transform-origin: 0 85px;
+}
+@media (max-width: 991px) {
+  .circle-text .text p {
+    transform: translate(50%, 0);
+  }
+  .circle-text .text span {
+    transform-origin: 0 60px;
+  }
+}
+.circle-text:hover .text {
+  animation-play-state: paused;
+}
+.circle-text .img-area {
+  width: 110px;
+  max-width: 110px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circle-text .img-area::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-color: var(--primaryColor);
+}
+@media (max-width: 991px) {
+  .circle-text .img-area {
+    width: 70px;
+    max-width: 70px;
+    height: 70px;
+  }
+}
+.circle-text.second .text p {
+  transform: translate(50%, -12px);
+}
+.circle-text.second .text span {
+  transform-origin: 0 100px;
+}
+@media (max-width: 991px) {
+  .circle-text.second .text p {
+    transform: translate(50%, -8px);
+  }
+  .circle-text.second .text span {
+    transform-origin: 0 70px;
+  }
+}
+.circle-text.second .img-area {
+  width: 140px;
+  max-width: 140px;
+  height: 140px;
+}
+@media (max-width: 991px) {
+  .circle-text.second .img-area {
+    width: 90px;
+    max-width: 90px;
+    height: 90px;
+  }
+}
+.circle-text.second .img-area span {
+  font-size: 57px;
+  color: #fff;
+}
+
+/*# sourceMappingURL=experience.css.map */

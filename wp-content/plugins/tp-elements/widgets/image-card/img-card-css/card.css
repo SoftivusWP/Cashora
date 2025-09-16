@@ -1,0 +1,28 @@
+:root {
+  --primaryColor: var(--primaryColor);
+  --secondaryColor: var(--primaryColor);
+}
+
+/*Logo CSS-----------------
+--------------------------*/
+.tp-grid-figure .logo-img {
+  text-align: center;
+}
+.tp-grid-figure .logo-img a {
+  transition: all 0.5s;
+}
+.tp-grid-figure .logo-img img {
+  margin: 0 auto;
+  transition: all 0.5s;
+  box-shadow: 0px 10px 30px rgba(33, 5, 5, 0.05);
+  border-radius: 15px;
+}
+.tp-grid-figure .logo-img:hover img {
+  opacity: 1;
+}
+.tp-grid-figure .logo-img:hover a.back {
+  display: block;
+}
+.tp-grid-figure .logo-img:hover a.back-exists {
+  display: none;
+}/*# sourceMappingURL=card.css.map */

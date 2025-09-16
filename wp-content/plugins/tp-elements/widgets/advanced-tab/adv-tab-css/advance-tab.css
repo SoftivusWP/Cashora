@@ -1,0 +1,111 @@
+/* Deckare Root */
+:root {
+  --bodyFont: "DM Sans", sans-serif;
+  --titleFont: "Poppins", sans-serif;
+  --primaryColor: #0B453C;
+  --secondaryColor: #CD3D1C;
+  --commonBlack: #000000;
+  --whiteColor: #ffffff;
+  --btnColor: #404A60;
+  --linkColor: #666666;
+  --hoverColor: #CD3D1C;
+  --globalColor: #404A60;
+  --titleColor: #222E48;
+  --bodyColor: #404A60;
+  --lightColor: #F5F6F7;
+  --formBg: #F5F6F7;
+  --btnBgColor: #0B453C;
+  --btnHoverColor: #CD3D1C;
+  --transition: 1.3s;
+}
+
+@keyframes waves {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+@keyframes fadeIn2nd {
+  0% {
+    opacity: 0;
+    transform: translate3d(-10%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+.tps-tab-advance .nav {
+  background: #F2F3F5;
+  padding: 12px 6px;
+  margin: 0;
+  margin-top: 35px;
+}
+.tps-tab-advance .nav li button {
+  border: none;
+  background: transparent;
+  border-radius: 100px;
+  padding: 8px 25px;
+  color: var(--titleColor);
+  font-size: 18px;
+  font-weight: 600;
+  font-family: var(--titleFont);
+  position: relative;
+}
+.tps-tab-advance .nav li button::before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 2px;
+  width: 0;
+  content: "";
+  background: var(--titleColor);
+}
+.tps-tab-advance .nav li button.active {
+  padding-left: 70px;
+}
+.tps-tab-advance .nav li button.active::before {
+  margin-left: 25px;
+  width: 40px;
+}
+
+.tab-custom-nav .nav {
+  float: right;
+  position: relative;
+  bottom: 102px;
+  z-index: 1;
+}
+.tab-custom-nav .tab-content {
+  clear: both;
+}
+
+/*# sourceMappingURL=advance-tab.css.map */

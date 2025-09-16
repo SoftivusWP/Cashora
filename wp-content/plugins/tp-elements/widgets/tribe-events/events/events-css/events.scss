@@ -1,0 +1,472 @@
+@import '../../../../scss/base';
+.container.container1600 {
+    max-width: 1600px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+#tribe-events-pg-template {
+    max-width: 100%;
+}
+.events-meta {
+    display: flex;
+    flex-wrap: wrap;
+    span {
+        display: inline-block;
+        i {
+            display: inline-block;
+            margin-right: 7px;
+        }
+    }
+    a {
+        display: inline-block;
+    }
+}
+
+.swiper.expansion-right {
+    margin-right: -451px;
+    @media (max-width: 1399px) {
+        margin-right: 0;
+    }
+}
+.swiper.expansion-left {
+    margin-left: -451px;
+    @media (max-width: 1399px) {
+        margin-left: 0;
+    }
+}
+
+
+// right left for icon/image CSS
+
+.pixelaxis-addon-events {
+    &.elementor-postion-top {
+        .events-part {
+            display: block;
+            text-align: center;
+            flex-direction: unset;
+        }
+    }
+    &.elementor-postion-left {
+        .events-part {
+            display: flex;
+            flex-direction: row;
+            @media (max-width: 767px) {
+                flex-wrap: wrap;
+            }
+            .events-icon {
+                display: inline-flex;
+                flex: 0 0 auto;
+                max-width: 50%;
+                @media (max-width: 767px) {
+                    max-width: 100%;
+                }
+            }
+        }
+        &.elementor-vertical-align-top {
+            .events-part { 
+                align-items: start;
+            }
+        }
+        &.elementor-vertical-align-middle {
+            .events-part { 
+                align-items: center;
+            }
+        }
+        &.elementor-vertical-align-bottom {
+            .events-part { 
+                align-items: end;
+            }
+        }
+    }
+    &.elementor-postion-right {
+        .events-part {
+            display: flex;
+            flex-direction: row-reverse;
+            @media (max-width: 767px) {
+                flex-wrap: wrap;
+            }
+            .events-icon {
+                display: inline-flex;
+                flex: 0 0 auto;
+                max-width: 50%;
+                @media (max-width: 767px) {
+                    max-width: 100%;
+                }
+            }
+        }
+        &.elementor-vertical-align-top {
+            .events-part { 
+                align-items: start;
+            }
+        }
+        &.elementor-vertical-align-middle {
+            .events-part { 
+                align-items: center;
+            }
+        }
+        &.elementor-vertical-align-bottom {
+            .events-part { 
+                align-items: end;
+            }
+        }
+    }
+    &.elementor-postion-bottom { 
+        .events-part { 
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
+
+}
+
+// right left for button CSS
+.services-text-part-wrapper {
+    &.elementor-postion-top {
+        display: block;
+        flex-direction: unset;
+        .services-text {
+
+        }
+        .services-btn-part {
+
+        }
+    }
+    &.elementor-postion-left {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        .services-text {
+            width: max-content;
+        }
+        .services-btn-part {
+            margin-right: 10px;
+        }
+
+        &.elementor-vertical-align-top {
+            align-items: start;
+        }
+        &.elementor-vertical-align-middle {
+            align-items: center;
+        }
+        &.elementor-vertical-align-bottom {
+            align-items: end;
+        }
+    }
+    &.elementor-postion-right {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .services-text {
+            width: max-content;
+        }
+        .services-btn-part {
+            margin-left: 10px;
+        }
+
+        &.elementor-vertical-align-top {
+            align-items: start;
+        }
+        &.elementor-vertical-align-middle {
+            align-items: center;
+        }
+        &.elementor-vertical-align-bottom {
+            align-items: end;
+        }
+    }
+    &.elementor-postion-bottom { 
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+
+//pagination 
+.tp-events-wrapper {
+
+    ul.page-numbers {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        li {
+            display: inline-block;
+            span.current {
+                background: var(--primaryColor);
+                color: #fff;
+                font-size: 16px;
+                text-decoration: none;
+                transition: 1.3s;
+                text-align: center;
+                color: #fff;
+                display: inline-block;
+                vertical-align: top;
+                border: 1px solid var(--primaryColor);
+                font-weight: 700;
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                border-radius: 50%;
+                margin: 0 2px;
+            }
+            span, a {
+                line-height: 50px;
+                color: #243757;
+                font-size: 16px;
+                text-decoration: none;
+                transition: 1.3s;
+                text-align: center;
+                background: transparent;
+                opacity: 1;
+                display: inline-block;
+                vertical-align: top;
+                border: 1px solid var(--primaryColor);
+                font-weight: 700;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                margin: 0 2px;
+                cursor: pointer;
+            }
+            a {
+                &.next {
+                    position: relative;
+                }
+                &:hover {
+                    background: var(--primaryColor);
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+
+// Details Page
+.page-template-default.tec-no-tickets-on-recurring .main-contain.offcontents, .post-type-archive-tribe_events .main-contain.offcontents {
+    background-color: #f4f4f4;
+}
+.thumb-event.position-relative img {
+    max-height: 950px;
+    object-fit: cover;
+}
+.mt-70-i {
+    margin-top: 70px !important;
+}
+
+header.tribe-events-header .tribe-events-header__breadcrumbs.tribe-events-c-breadcrumbs {
+    display: none !important;
+}
+
+header.tribe-events-header .tribe-events-header__title {
+    display: none !important;
+}
+
+.tp-after-meta-events .tribe-tickets__rsvp-wrapper {
+    max-width: 100% !important;
+    width: 100%;
+}
+.event-tickets .tribe-tickets__commerce-checkout, .tribe-common .tribe-tickets__commerce-checkout {
+    max-width: 100% !important;
+    position: relative;
+}
+.event-tickets .tribe-tickets__form input[type=color], .event-tickets .tribe-tickets__form input[type=date], .event-tickets .tribe-tickets__form input[type=datetime-local], .event-tickets .tribe-tickets__form input[type=datetime], .event-tickets .tribe-tickets__form input[type=email], .event-tickets .tribe-tickets__form input[type=month], .event-tickets .tribe-tickets__form input[type=number], .event-tickets .tribe-tickets__form input[type=password], .event-tickets .tribe-tickets__form input[type=range], .event-tickets .tribe-tickets__form input[type=search], .event-tickets .tribe-tickets__form input[type=tel], .event-tickets .tribe-tickets__form input[type=text], .event-tickets .tribe-tickets__form input[type=time], .event-tickets .tribe-tickets__form input[type=url], .event-tickets .tribe-tickets__form input[type=week], .event-tickets .tribe-tickets__form select, .event-tickets .tribe-tickets__form textarea {
+    max-width: 100% !important;
+}
+.tribe-tickets__tickets-title {
+    font-size: 20px !important;
+    text-transform: uppercase !important;
+    font-weight: 700 !important;
+}
+
+.tribe-common-h6--min-medium.tribe-tickets__tickets-item-content-title {
+    font-size: 18px;
+}
+
+.tribe-tickets__tickets-item-details-content {
+    font-size: 16px !important;
+}
+
+.event-tickets .tribe-tickets__rsvp-actions-button-not-going {
+    font-size: 14px !important;
+    &:hover {
+        color: var(--primaryColor);
+    }
+}
+.event-tickets .tribe-tickets__rsvp-actions .tribe-common-c-btn {
+    max-width: 100% !important;
+}
+.tribe-common button.tribe-common-c-btn, .tribe-common .tribe-common-c-btn-border, .tribe-common a.tribe-common-c-btn-border {
+    background-color: var(--primaryColor) !important;
+    border: 1px solid var(--primaryColor) !important;
+    padding: 12px 20px !important;
+    color: #fff !important;
+    &:hover {
+        background-color: var(--titleColor) !important;
+    }
+}
+
+.tribe-common b, .tribe-common strong {
+    font-size: 16px;
+}
+
+.tribe-tickets__rsvp-title {
+    text-transform: uppercase !important;
+}
+
+.tribe-tickets__rsvp-description {
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+}
+
+span.tribe-tickets__rsvp-attendance-going {
+    font-size: 14px !important;
+}
+
+.tribe-tickets__rsvp-availability {
+    font-size: 14px !important;
+}
+
+.post-type-archive-tribe_events .main-contain #content {
+    padding-top: 0;
+    padding-bottom: 0;
+    background: #f4f4f4;
+}
+
+.tp-tribe-events-wrapper {
+    display: flex;
+    width: 100%;
+    @media (max-width: 767px) {
+        display: block;
+    }
+}
+
+.tp-tribe-events-wrapper .tribe-events-single-section.tribe-events-event-meta {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.tp-tribe-events-wrapper .tribe-events-venue-map {
+    width: 50%;
+    @media (max-width: 767px) {
+        width: 100%;
+    }
+}
+
+.tp-tribe-events-wrapper .tribe-events-single-section.tribe-events-event-meta .tribe-events-meta-group, .tp-tribe-events-wrapper .tribe-events-single-section.tribe-events-event-meta .tribe-events-venue-map {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-bottom: 40px;
+}
+
+.tp-tribe-events-wrapper .tribe-events-event-meta::before, .tp-tribe-events-wrapper .tribe-events-event-meta ~ div:not(.tribe-events-event-meta, .event-tickets) {
+	border-top: 0px solid var(--tec-color-border-secondary);
+    border: 0;
+}
+
+.tp-after-meta-events .tribe-common.event-tickets.tribe-tickets__tickets-wrapper .tribe-tickets__tickets-form {
+    max-width: 100%;
+    margin-bottom: 40px !important;
+}
+
+.tribe-events-single-section-title {
+    font-size: 20px !important;
+    margin-bottom: 25px !important;
+}
+
+.tribe-events-meta-group dl > dt {
+    font-size: 18px;
+    color: var(--titleColor);
+}
+
+.tribe-events-meta-group.tribe-events-meta-group-details dl, .tribe-events-meta-group.tribe-events-meta-group-details dl dd, .tribe-events-meta-group.tribe-events-meta-group-details dl dd abbr {
+    font-size: 16px;
+    color: var(--bodyColor);
+}
+
+dd.tribe-events-event-categories > a {
+    color: var(--bodyColor);
+}
+
+
+.tp-tribe-events-pagination ul.tribe-events-sub-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    @media (max-width: 767px) {
+        flex-direction: column;
+    }
+    li {
+        line-height: 1.3;
+        flex: 1;
+    }
+    li.tribe-events-nav-next {
+        text-align: end;
+    }
+}
+
+.tp-tribe-events-pagination ul.tribe-events-sub-nav a {
+    color: var(--titleColor) !important;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.tp-tribe-events-pagination ul.tribe-events-sub-nav a:hover {
+    color: var(--primaryColor) !important;
+}
+
+.tp-event-sidebar-info-single i {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+
+.event-details-title {
+    margin-bottom: 30px !important;
+}
+.sidebar_thumb {
+    margin-bottom: 25px;
+    span.event_price {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: inline-block;
+        background-color: #ddd;
+        padding: 5px 15px;
+        color: #090908;
+    }
+}
+.tp-event-social {
+    margin-top: 15px;
+    a {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        border: 0;
+        padding: 0px;
+        border: 1px solid #ddd;
+        border-radius: 50%;
+        text-align: center;
+        display: inline-block;
+        margin-right: 5px;
+        margin-bottom: 10px;
+        &:hover {
+            background: var(--primaryColor);
+            i {
+                color: #fff;
+            }
+        }
+    }
+}
+
+.video__thumb.mb-30 > img {
+    min-height: 350px;
+}
+.mt-70 {
+    margin-top: 70px;
+}

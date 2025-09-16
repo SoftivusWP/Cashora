@@ -1,0 +1,164 @@
+.rs-tooltip-area {
+    .box-inner {
+        position: relative;
+        padding: 50px 15px 40px;
+        transition: 0.4s;
+        cursor: pointer;
+
+        .rs-tooltip {
+            position: absolute;
+            width: max-content;
+            background-color: #000;
+            color: #ffffff;
+            border-radius: 3px;
+            padding: 2px 10px;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 10;
+            max-width: 270px;
+            text-decoration: none;
+
+            &:before {
+                content: "";
+                position: absolute;
+                border-width: 5px;
+                border-style: solid;
+                margin-top: 0;
+                top: 100%;
+                left: calc(50% - 5px);
+            }
+
+            &.bottom,
+            &.top {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            &.top {
+                bottom: 110%;
+                margin-bottom: 10px;
+
+                &:before {
+                    border-color: #000 transparent transparent transparent;
+                }
+            }
+
+            &.left,
+            &.right {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            &.right {
+                left: 110%;
+                margin-left: 10px;
+
+                &:before {
+                    left: auto;
+                    right: 100%;
+                    top: 50%;
+                    border-color: transparent #000 transparent transparent;
+                    transform: translateY(-50%);
+                }
+            }
+
+            &.left {
+                left: auto;
+                right: 110%;
+                top: 50%;
+                transform: translateY(-50%);
+                margin-right: 10px;
+
+                &:before {
+                    right: auto;
+                    left: 100%;
+                    top: 50%;
+                    border-color: transparent transparent transparent #000;
+                    transform: translateY(-50%);
+                }
+            }
+
+            &.bottom {
+                bottom: auto;
+                top: 110%;
+                margin-top: 10px;
+
+                &:before {
+                    top: auto;
+                    bottom: 100%;
+                    left: 50%;
+                    border-color: transparent transparent #000 transparent;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+
+        .icon-area {
+            display: inline-block;
+            color: var(--primaryColor);
+            transition: all ease .3s;
+
+            i {
+                transition: all ease .3s;
+                font-size: 50px;
+            }
+        }
+
+        .text-area {
+            padding: 10px 0 0;
+            position: relative;
+
+            .iconbox-title {
+                position: relative;
+
+                .title {
+                    font-size: 20px;
+                    margin: 0;
+                    color: var(--titleColor);
+                    font-weight: 500;
+                    line-height: 1.5;
+
+                    a {
+                        text-decoration: none !important;
+                        color: var(--titleColor);
+
+                        &:hover {
+                            color: var(--hoverColor);
+                        }
+                    }
+                }
+            }
+
+            .rs-tooltip-text {
+                font-size: 15px;
+                margin: 0;
+            }
+        }
+
+        &:hover {
+
+            // box-shadow: 0 8px 38px 0 rgba(0,0,0,.20);
+            .rs-tooltip {
+                opacity: 1;
+                visibility: visible;
+
+                &.top {
+                    bottom: 100%;
+                }
+
+                &.right {
+                    left: 100%;
+                }
+
+                &.bottom {
+                    top: 100%;
+                }
+
+                &.left {
+                    right: 100%;
+                }
+            }
+        }
+
+    }
+}

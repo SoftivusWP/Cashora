@@ -1,0 +1,210 @@
+:root {
+  --primaryColor: var(--primaryColor);
+  --secondaryColor: var(--primaryColor);
+}
+
+.pixelaxis-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.pixelaxis-image.yes .veritcal {
+  animation-name: veritcal;
+  animation-timing-function: linear;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  position: absolute;
+  right: 0;
+  top: -150px;
+}
+@keyframes veritcal {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, 30px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.pixelaxis-image.yes .veritcal_two {
+  animation-name: veritcal_two;
+  animation-timing-function: linear;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+}
+@keyframes veritcal_two {
+  0% {
+    transform: translateY(100px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100px);
+  }
+}
+.pixelaxis-image.yes .horizontal {
+  animation-name: horizontal;
+  animation-timing-function: linear;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+}
+@keyframes horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.pixelaxis-image.yes .rotated_style {
+  animation: rotate1 30s linear infinite;
+  -webkit-animation: rotate1 30s linear infinite;
+}
+@keyframes rotate1 {
+  from {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.image-rotate {
+  animation: rotation infinite 14s linear;
+}
+
+/* Rotation frame*/
+@keyframes rotation {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.reveal-item {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.reveal-item .reveal-animation {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 101%;
+  background: #BB0B0B;
+}
+
+.reveal-item .reveal-animation::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition-property: transform;
+  transition-duration: 1s;
+}
+
+.reveal-animation.reveal-primary::before {
+  background: #0c0c0a;
+}
+
+.reveal-animation.reveal-dark::before {
+  background: #000;
+}
+
+.reveal-animation.reveal-white::before {
+  background: #000;
+}
+
+.reveal-animation.reveal-top.aos-animate::before,
+.reveal-animation.reveal-bottom.aos-animate::before {
+  transform: scaleY(1);
+}
+
+.reveal-animation.reveal-start.aos-animate::before,
+.reveal-animation.reveal-end.aos-animate::before {
+  transform: scaleX(1);
+}
+
+.reveal-animation.reveal-top::before {
+  transform: scaleY(0);
+  transform-origin: 0% 100%;
+}
+
+.reveal-animation.reveal-start::before {
+  transform: scaleX(0);
+  transform-origin: 100% 0%;
+}
+
+.reveal-animation.reveal-end::before {
+  transform: scaleX(0);
+  transform-origin: 0% 100%;
+}
+
+.reveal-animation.reveal-bottom::before {
+  transform: scaleY(0);
+  transform-origin: 100% 0%;
+}
+
+[data-aos=reveal-top],
+[data-aos=reveal-start],
+[data-aos=reveal-end],
+[data-aos=reveal-bottom] {
+  transition-property: transform;
+  transition-delay: 1s;
+}
+
+[data-aos=reveal-top] {
+  transform: scaleY(1);
+}
+
+[data-aos=reveal-top].aos-animate {
+  transform: scaleY(0);
+  transform-origin: 100% 0%;
+}
+
+[data-aos=reveal-start] {
+  transform: scaleX(1);
+}
+
+[data-aos=reveal-start].aos-animate {
+  transform: scaleX(0);
+  transform-origin: 0% 100%;
+}
+
+[data-aos=reveal-end] {
+  transform: scaleX(1);
+}
+
+[data-aos=reveal-end].aos-animate {
+  transform: scaleX(0);
+  transform-origin: 100% 0%;
+}
+
+[data-aos=reveal-bottom] {
+  transform: scaleY(1);
+}
+
+[data-aos=reveal-bottom].aos-animate {
+  transform: scaleY(0);
+  transform-origin: 0% 100%;
+}
+
+[data-aos=reveal-item] {
+  visibility: hidden;
+  transition-property: visibility;
+  transition-duration: 0s;
+}
+
+[data-aos=reveal-item].aos-animate {
+  visibility: visible;
+}/*# sourceMappingURL=image.css.map */

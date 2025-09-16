@@ -1,0 +1,57 @@
+:root {
+  --primaryColor: var(--primaryColor);
+  --secondaryColor: var(--primaryColor);
+}
+
+.rs-skill-bar .skillbar {
+  background: #eeeeee;
+  display: inline-block;
+  height: 6px;
+  position: relative;
+  width: 100%;
+}
+.rs-skill-bar .skillbar .skillbar-bar {
+  background: #ff6600;
+  height: 8px;
+  width: 0;
+  margin-bottom: 0;
+}
+.rs-skill-bar .skillbar .skillbar-title,
+.rs-skill-bar .skillbar .skill-bar-percent {
+  position: absolute;
+}
+.rs-skill-bar .skillbar .skillbar-title {
+  color: #212121;
+  font-size: 20px;
+  font-weight: 600;
+}
+.rs-skill-bar .skillbar .skill-bar-percent {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0C0A0A;
+}
+.rs-skill-bar.animation .skillbar .skillbar-bar, .rs-skill-bar.striped .skillbar .skillbar-bar {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-size: 1rem 1rem;
+}
+.rs-skill-bar.animation .skillbar .skillbar-bar {
+  animation: rs-progress-pie-stripes 1s linear infinite;
+}
+.rs-skill-bar.style1 .skillbar .skillbar-title {
+  top: -20px;
+}
+.rs-skill-bar.style1 .skillbar .skill-bar-percent {
+  right: 0;
+  top: -20px;
+}
+.rs-skill-bar.style2 .skillbar .skillbar-title {
+  left: 0;
+  padding: 2px 20px 0;
+  top: 0;
+  width: 160px;
+  background: #83b614;
+}
+.rs-skill-bar.style2 .skillbar .skill-bar-percent {
+  right: 10px;
+  top: 0;
+}/*# sourceMappingURL=progress.css.map */

@@ -152,11 +152,12 @@ function cashora_after_import_setup($selected_import) {
   // Assign menus to their locations.
 	$main_menu     = get_term_by( 'name', 'Primary Menu', 'nav_menu' );
   $menu_single     = get_term_by( 'name', 'Onepage Menu', 'nav_menu' );
-	set_theme_mod( 'nav_menu_locations', array(
-      'menu-1' => $main_menu->term_id, 
-      'menu-2' => $menu_single->term_id,      
-    )
-  );
+
+  set_theme_mod('nav_menu_locations', array(
+    'menu-1' => $main_menu ? $main_menu->term_id : 0,
+    'menu-2' => $menu_single ? $menu_single->term_id : 0,
+  ));
+
   if ( 'Cashora Default Demo' == $selected_import['import_file_name'] ) {
 
     $front_page_id = get_page_by_title('Main Home');
@@ -165,28 +166,16 @@ function cashora_after_import_setup($selected_import) {
 
   $blog_page_id  = get_page_by_title( 'News & Media' );
   update_option( 'show_on_front', 'page' );
-  update_option( 'page_on_front', $front_page_id->ID );
-  update_option( 'page_for_posts', $blog_page_id->ID ); 
+  update_option('page_on_front', $front_page_id->ID ?? 0);
+  update_option('page_for_posts', $blog_page_id->ID ?? 0);
 
-  //Import Revolution Slider
-  if ( class_exists( 'RevSlider' ) ) {
-    $slider_array = array(
-
-      get_template_directory()."/inc/demo-data/sliders/healthy-slider.zip",  
-      get_template_directory()."/inc/demo-data/sliders/swimming-slider.zip",  
-
-    );
-    $slider = new RevSlider();
-    foreach($slider_array as $filepath){
-      $slider->importSliderFromPost(true,true,$filepath);  
-    }
-  }
+  // Elementor settings fix — enable all CPTs
+  $cpts = get_post_types(array('public' => true), 'names');
+  update_option('elementor_cpt_support', array_values($cpts));
+  update_option('elementor_disable_color_schemes', 'yes');
+  update_option('elementor_disable_typography_schemes', 'yes');
   
 }
 add_action( 'pt-ocdi/after_import', 'cashora_after_import_setup' );
 
 add_filter( 'use_widgets_block_editor', '__return_false' );
-
-
-update_option('elementor_disable_color_schemes', 'yes');
-update_option('elementor_disable_typography_schemes', 'yes');

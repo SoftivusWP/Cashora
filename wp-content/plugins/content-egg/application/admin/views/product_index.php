@@ -20,9 +20,7 @@
 $message = '';
 ?>
 
-<?php if (\ContentEgg\application\Plugin::isFree() || \ContentEgg\application\Plugin::isInactiveEnvato()) : ?>
-    <div class="cegg-maincol">
-    <?php endif; ?>
+<?php // License restrictions removed - full access granted ?>
 
     <div class="wrap">
         <h1 class="wp-heading-inline">
@@ -45,7 +43,4 @@ $message = '';
         </form>
     </div>
 
-    <?php if (\ContentEgg\application\Plugin::isFree() || \ContentEgg\application\Plugin::isInactiveEnvato()) : ?>
-    </div>
-    <?php include('_promo_box.php'); ?>
-<?php endif; ?>
+    <?php // Promotional box removed - full functionality available ?>

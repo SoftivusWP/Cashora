@@ -29,9 +29,7 @@ if ($table->current_action() == 'run')
     $message = '<div class="updated below-h2" id="message"><p>' . __('Autoblogging finished tasks', 'content-egg') . '</p></div>';
 ?>
 
-<?php if (\ContentEgg\application\Plugin::isFree() || \ContentEgg\application\Plugin::isInactiveEnvato()) : ?>
-    <div class="cegg-maincol">
-    <?php endif; ?>
+<?php // License restrictions removed - full access granted ?>
 
 
     <div class="wrap">
@@ -53,7 +51,4 @@ if ($table->current_action() == 'run')
         </form>
     </div>
 
-    <?php if (\ContentEgg\application\Plugin::isFree() || \ContentEgg\application\Plugin::isInactiveEnvato()) : ?>
-    </div>
-    <?php include('_promo_box.php'); ?>
-<?php endif; ?>
+    <?php // Promotional box removed - full functionality available ?>

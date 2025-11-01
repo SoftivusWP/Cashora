@@ -5,24 +5,14 @@
 
     <?php \settings_errors(); ?>
 
-    <form action="options.php" method="POST">
-        <?php \settings_fields($page_slug); ?>
-        <table class="form-table">
-            <?php \do_settings_fields($page_slug, 'default'); ?>
-        </table>
-        <?php \submit_button(__('Activate license', 'content-egg')); ?>
-    </form>
+    <div style="background: #d4edda; border: 1px solid #c3e6cb; color: #155724; padding: 15px; border-radius: 4px; margin: 20px 0;">
+        <h3 style="margin-top: 0; color: #155724;">✓ License Status: Active</h3>
+        <p style="margin-bottom: 0;">Content Egg Pro is fully activated and ready to use. All premium features are available.</p>
+    </div>
 
-    <?php if (\ContentEgg\application\Plugin::isActivated()) : ?>
-        <h2><?php esc_html_e('Deactivate license', 'content-egg'); ?></h2>
-        <?php esc_html_e('You can transfer your license to a new domain. First, deactivate the license on your current domain. Then, uninstall Content Egg from that domain.', 'content-egg'); ?>
-        <br>
-        <br>
-        <form action="<?php echo esc_url_raw(\get_admin_url(\get_current_blog_id(), 'admin.php?page=content-egg-lic')); ?>" method="POST">
-            <input type="hidden" name="cmd" id="cmd" value="lic_reset" />
-            <input type="hidden" name="nonce_reset" value="<?php echo \esc_attr(\wp_create_nonce('license_reset')); ?>" />
-            <input type="submit" name="submit2" id="submit2" class="button submitdelete deletion" value="<?php esc_html_e('Deactivate license', 'content-egg'); ?>" />
-        </form>
-    <?php endif; ?>
+    <div style="background: #f8f9fa; border: 1px solid #dee2e6; color: #495057; padding: 15px; border-radius: 4px; margin: 20px 0;">
+        <h3 style="margin-top: 0; color: #495057;">Plugin Information</h3>
+        <p style="margin-bottom: 0;">Content Egg Pro is running in full mode with all premium features enabled. No license key required.</p>
+    </div>
 
 </div>

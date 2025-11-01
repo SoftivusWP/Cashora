@@ -1,7 +1,5 @@
 <?php defined('\ABSPATH') || exit; ?>
-<?php if (\ContentEgg\application\Plugin::isFree() || \ContentEgg\application\Plugin::isInactiveEnvato()) : ?>
-    <div class="cegg-maincol">
-    <?php endif; ?>
+<?php // License restrictions removed - full access granted ?>
     <div class="wrap">
         <h2>
             <?php esc_html_e('Export/Import of settings', 'content-egg'); ?>
@@ -36,7 +34,4 @@
             <p><input type="submit" value="<?php esc_html_e('Import', 'content-egg'); ?>" id="config_submit" class="button-primary" name="submit"></p>
         </form>
     </div>
-    <?php if (\ContentEgg\application\Plugin::isFree() || \ContentEgg\application\Plugin::isInactiveEnvato()) : ?>
-    </div>
-    <?php include('_promo_box.php'); ?>
-<?php endif; ?>
+    <?php // Promotional box removed - full functionality available ?>

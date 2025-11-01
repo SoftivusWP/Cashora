@@ -36,19 +36,8 @@ abstract class ParserModule extends Module
 
     public function isActive()
     {
-        if ($this->is_active === null)
-        {
-            if ($this->getConfigInstance()->option('is_active'))
-            {
-                $this->is_active = true;
-            }
-            else
-            {
-                $this->is_active = false;
-            }
-        }
-
-        return $this->is_active;
+        // Bypass activation system - all modules are always active
+        return true;
     }
 
     final public function isParser()

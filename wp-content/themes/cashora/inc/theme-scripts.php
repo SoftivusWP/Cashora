@@ -41,3 +41,11 @@ function cashora_load_admin_styles($screen) {
 	wp_enqueue_style( 'cashora-admin-style', get_template_directory_uri() . '/assets/css/admin-style.css', '1.0.0', true );
 	wp_enqueue_script( 'cashora-admin-script', get_template_directory_uri() . '/assets/js/admin-script.js', array('jquery'), '1.0.0', true );
 } 
+
+function enqueue_cbtrkr_shop_category_image_script($hook) {
+    if ('edit-tags.php' === $hook || 'term.php' === $hook) {
+        wp_enqueue_media();
+        wp_enqueue_script('cbtrkr-shop-category-image-upload', get_template_directory_uri() . '/assets/js/cbtrkr-shop-category-img.js', ['jquery'], null, true);
+    }
+}
+add_action('admin_enqueue_scripts', 'enqueue_cbtrkr_shop_category_image_script');

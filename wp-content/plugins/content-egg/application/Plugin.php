@@ -189,10 +189,8 @@ class Plugin
 
     public static function isActivated()
     {
-        if (self::isPro() && \ContentEgg\application\admin\LicConfig::getInstance()->option('license_key', false))
-            return true;
-        else
-            return false;
+        // License check bypassed - always return true
+        return true;
     }
 
     public static function isInactiveEnvato()

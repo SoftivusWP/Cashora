@@ -4,9 +4,7 @@ use ContentEgg\application\components\ModuleManager;
 use ContentEgg\application\admin\GeneralConfig;
 ?>
 
-<?php if (\ContentEgg\application\Plugin::isFree() || \ContentEgg\application\Plugin::isInactiveEnvato()) : ?>
-    <div class="cegg-maincol">
-    <?php endif; ?>
+<?php // License restrictions removed - full access granted ?>
     <div class="wrap">
         <h2>
             <?php esc_html_e('Fill', 'content-egg'); ?>
@@ -160,7 +158,4 @@ use ContentEgg\application\admin\GeneralConfig;
 
 
     </div>
-    <?php if (\ContentEgg\application\Plugin::isFree() || \ContentEgg\application\Plugin::isInactiveEnvato()) : ?>
-    </div>
-    <?php include('_promo_box.php'); ?>
-<?php endif; ?>
+    <?php // Promotional box removed - full functionality available ?>

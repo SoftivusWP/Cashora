@@ -1,0 +1,163 @@
+:root {
+  --bodyFont: "DM Sans", sans-serif;
+  --titleFont: "Poppins", sans-serif;
+  --transition: all .3s ease;
+  --body_bg: #ffffff;
+  --globalColor: #F5F5F5;
+  --borderColor: #DFE0E4;
+  --bodyColor: #4F586D;
+  --titleColor: #222E48;
+  --primaryColor: #00C292;
+  --secondaryColor: #FF6B00;
+  --whiteColor: #ffffff;
+  --blackColor: #1C1C4D;
+  --linkColor: #FF6B00;
+  --hoverColor: var(--secondaryColor);
+  --boxBorderRadius: 5px;
+  --imageBorderRadius: 4px;
+  --btnBorderRadius: 5px;
+  --btnBgColor: #1C1C4D;
+  --btnHoverBgColor: #EB7A23;
+  --btnColor: #ffffff;
+  --btnHoverColor: #ffffff;
+  --btnBgColor2: #EB7A23;
+  --btnHoverBgColor2: #1C1C4D;
+  --btnColor2: #ffffff;
+  --btnHoverColor2: #ffffff;
+}
+
+@keyframes waves {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+@keyframes fadeIn2nd {
+  0% {
+    opacity: 0;
+    transform: translate3d(-10%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+/* Coupon Search */
+#coupon-search-results {
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  top: 100%;
+  padding: 0px 20px;
+  z-index: 2;
+}
+
+#coupon-search-results ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#coupon-search-results li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+#coupon-search-results li a {
+  text-decoration: none;
+  color: #333;
+}
+
+#coupon-search-results li a:hover {
+  color: #FF943D;
+}
+
+button.tp-coupn-search-btn {
+  position: absolute;
+  height: 100%;
+  line-height: 100%;
+  min-width: 40px;
+  padding: 0;
+  border-radius: 30px;
+  right: 8px;
+  height: calc(100% - 10px);
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #FF943D;
+  padding: 0 25px;
+}
+
+input#coupon-search-input {
+  margin-bottom: 0;
+  border-radius: 30px;
+  padding-right: 60px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: transparent;
+}
+
+.tp-coupon-search-style1 button.tp-coupn-search-btn {
+  padding: 0 10px;
+}
+
+/* style 2 */
+.tp-coupn-search {
+  display: flex;
+}
+
+.tp-coupn-search-input-wrapper {
+  flex: 1;
+}
+
+.tp-coupon-category {
+  width: max-content;
+  background-color: transparent;
+  border-color: transparent !important;
+  border-right: 1px solid rgb(213, 224, 228) !important;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-bottom: 0;
+}
+.tp-coupon-category .list {
+  padding: 0 0 !important;
+}
+
+.tp-coupn-search {
+  background: #fff;
+  border-radius: 100px;
+}
+
+/*# sourceMappingURL=search.css.map */

@@ -729,6 +729,71 @@ function tp_portfoloio_metas() {
 
 }
 
+ 
+add_action( 'cmb2_admin_init', 'tp_cashback_tracker_metas' );
+/**
+ * Define the metabox and field configurations.
+ */
+function tp_cashback_tracker_metas() {
+
+	/**
+	 * Initiate the metabox
+	 */
+	$cmb = new_cmb2_box( array(
+		'id'            => 'tp_cashback_tracker_metas',
+		'title'         => __( 'Cashback Metas', 'tp-framework' ),
+		'object_types'  => array( 'cbtrkr_shop', ), // Post type
+		'context'       => 'normal',
+		'priority'      => 'high',
+		'show_names'    => true, // Show field names on the left
+		// 'cmb_styles' => false, // false to disable the CMB stylesheet
+		// 'closed'     => true, // Keep the metabox closed by default
+	) );
+
+	$group_field_id = $cmb->add_field( array(
+		'id'          => 'cbtrkr_metas_info',
+		'type'        => 'group',
+		'options'     => array(
+			'group_title'       => __( 'Meta Info {#}', 'tp-framework' ), // since version 1.1.4, {#} gets replaced by row number
+			'add_button'        => __( 'Add Another Meta Info', 'tp-framework' ),
+			'remove_button'     => __( 'Remove Meta Info', 'tp-framework' ),
+			'sortable'          => true,
+			// 'closed'         => true, // true to have the groups closed by default
+			// 'remove_confirm' => esc_html__( 'Are you sure you want to remove?', 'tp-framework' ), // Performs confirmation before removing group.
+		),
+	) );
+
+
+	// Id's for group's fields only need to be unique for the group. Prefix is not needed.
+	// $cmb->add_group_field( $group_field_id, array(
+	// 	'name' => 'Information Icon',
+	// 	'id'   => 'pf_info_title_icon',
+	// 	'type' => 'text',
+	// 	'description' => __( 'Portfolio Information Icon (You can write here font-awesome icon name. Ex: fas fa-calendar-alt)', 'tp-framework' ),
+	// 	// 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
+	// ) );
+
+	// Id's for group's fields only need to be unique for the group. Prefix is not needed.
+	$cmb->add_group_field( $group_field_id, array(
+		'name' => 'Information Title',
+		'id'   => 'cbtrkr_metas_title',
+		'type' => 'text',
+		'description' => __( 'Information name. Ex: Budget', 'tp-framework' ),
+		// 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
+	) );
+	
+	// Id's for group's fields only need to be unique for the group. Prefix is not needed.
+	$cmb->add_group_field( $group_field_id, array(
+		'name' => 'Information Value',
+		'id'   => 'cbtrkr_metas_value',
+		'type' => 'text',
+		'description' => __( 'Information value. Ex: $30K', 'tp-framework' ),
+
+		// 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
+	) );
+
+}
+
 add_action( 'cmb2_admin_init', 'tp_product_metabox' );
 /**
  * Define the metabox and field configurations.

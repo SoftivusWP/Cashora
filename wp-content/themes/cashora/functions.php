@@ -162,11 +162,7 @@ add_action( 'after_setup_theme', 'cashora_setup' );
 /**
 *Custom Image Size
 */
-add_image_size( 'cashora-team-slider', 358, 415, true );
-add_image_size( 'cashora-portfolio-slider', 648, 500, true );
-add_image_size( 'cashora-portfolio-slider-2', 800, 510, true );
 add_image_size( 'cashora-blog-slider', 420, 365, true );
-add_image_size( 'cashora-portfolio-grid', 600, 700, true );
 add_image_size( 'cashora-blog-sideabr', 87, 87, true );
 
 /**
@@ -375,8 +371,138 @@ if ( class_exists( 'WooCommerce' ) ) {
 		remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
 	}
 
-
-
-
-
 }
+
+
+/** #######################################################################################################################################################
+ * Cashback tracker start here 
+ * #####################################################################################################################################################***/
+
+// Register Category taxonomy for cbtrkr_shop
+function cbtrkr_shop_register_category_taxonomy() {
+    register_taxonomy(
+        'cbtrkr_shop_category', // taxonomy slug
+        'cbtrkr_shop',          // post type
+        array(
+            'labels' => array(
+                'name'              => __( 'Shop Categories', 'textdomain' ),
+                'singular_name'     => __( 'Shop Category', 'textdomain' ),
+                'search_items'      => __( 'Search Shop Categories', 'textdomain' ),
+                'all_items'         => __( 'All Shop Categories', 'textdomain' ),
+                'parent_item'       => __( 'Parent Shop Category', 'textdomain' ),
+                'parent_item_colon' => __( 'Parent Shop Category:', 'textdomain' ),
+                'edit_item'         => __( 'Edit Shop Category', 'textdomain' ),
+                'update_item'       => __( 'Update Shop Category', 'textdomain' ),
+                'add_new_item'      => __( 'Add New Shop Category', 'textdomain' ),
+                'new_item_name'     => __( 'New Shop Category Name', 'textdomain' ),
+                'menu_name'         => __( 'Shop Categories', 'textdomain' ),
+            ),
+            'hierarchical' => true, // true = like categories, false = like tags
+            'show_admin_column' => true,
+            'show_ui' => true,
+            'show_in_rest' => true, // enable for Gutenberg/REST API
+        )
+    );
+}
+add_action( 'init', 'cbtrkr_shop_register_category_taxonomy' );
+
+
+
+/*******
+ * ########################################################################################################################################################
+ * Add Image column to cbtrkr_shop_category taxonomy list
+ * #######################################################################################################################################################
+ * ********/
+// Add new column
+function cbtrkr_shop_category_columns($columns) {
+    $new = [];
+    $new['cbtrkr_shop_category_image'] = __('Image', 'eblog'); // Add before name column
+    return array_slice($columns, 0, 1, true) + $new + array_slice($columns, 1, null, true);
+}
+add_filter('manage_edit-cbtrkr_shop_category_columns', 'cbtrkr_shop_category_columns');
+
+// Populate column
+function cbtrkr_shop_category_column_content($content, $column_name, $term_id) {
+    if ($column_name === 'cbtrkr_shop_category_image') {
+        $image_id = get_term_meta($term_id, 'cbtrkr_shop_category_image', true);
+        if ($image_id) {
+            $image = wp_get_attachment_image($image_id, 'thumbnail', false, ['style' => 'width:40px;height:auto;border-radius:4px;']);
+            return $image;
+        } else {
+            return '<span style="color:#999;">—</span>';
+        }
+    }
+    return $content;
+}
+add_filter('manage_cbtrkr_shop_category_custom_column', 'cbtrkr_shop_category_column_content', 10, 3);
+
+// Make column not sortable (optional, just keeps UI clean)
+function cbtrkr_shop_category_column_width() {
+    echo '<style>
+        .column-cbtrkr_shop_category_image { width:60px; text-align: start; }
+    </style>';
+}
+add_action('admin_head', 'cbtrkr_shop_category_column_width');
+
+
+
+/*******
+ * ########################################################################################################################################################
+ * Cashback Shop Category Image start Here 
+ * #######################################################################################################################################################
+ * ********/
+
+// Add image upload field to add form
+function cbtrkr_shop_category_add_image_field($taxonomy) {
+    ?>
+    <div class="form-field term-group">
+        <label for="cbtrkr_shop_category_image"><?php _e('Category Image', 'eblog'); ?></label>
+        <input type="hidden" id="cbtrkr_shop_category_image" name="cbtrkr_shop_category_image" value="">
+        <div id="cbtrkr_shop_category_image_wrapper"></div>
+        <button type="button" class="button cbtrkr_shop_category_image_upload"><?php _e('Add Image', 'eblog'); ?></button>
+        <button type="button" class="button cbtrkr_shop_category_image_remove"><?php _e('Remove Image', 'eblog'); ?></button>
+    </div>
+    <?php
+}
+add_action('cbtrkr_shop_category_add_form_fields', 'cbtrkr_shop_category_add_image_field', 10, 2);
+
+// Save category image
+function cbtrkr_shop_category_save_image($term_id, $tt_id) {
+    if (isset($_POST['cbtrkr_shop_category_image']) && '' !== $_POST['cbtrkr_shop_category_image']) {
+        add_term_meta($term_id, 'cbtrkr_shop_category_image', absint($_POST['cbtrkr_shop_category_image']), true);
+    }
+}
+add_action('created_cbtrkr_shop_category', 'cbtrkr_shop_category_save_image', 10, 2);
+
+// Edit form field
+function cbtrkr_shop_category_edit_image_field($term, $taxonomy) {
+    $image_id = get_term_meta($term->term_id, 'cbtrkr_shop_category_image', true);
+    ?>
+    <tr class="form-field term-group-wrap">
+        <th scope="row">
+            <label for="cbtrkr_shop_category_image"><?php _e('Category Image', 'eblog'); ?></label>
+        </th>
+        <td>
+            <input type="hidden" id="cbtrkr_shop_category_image" name="cbtrkr_shop_category_image" value="<?php echo esc_attr($image_id); ?>">
+            <div id="cbtrkr_shop_category_image_wrapper">
+                <?php if ($image_id) {
+                    echo wp_get_attachment_image($image_id, 'thumbnail');
+                } ?>
+            </div>
+            <button type="button" class="button cbtrkr_shop_category_image_upload"><?php _e('Add Image', 'eblog'); ?></button>
+            <button type="button" class="button cbtrkr_shop_category_image_remove"><?php _e('Remove Image', 'eblog'); ?></button>
+        </td>
+    </tr>
+    <?php
+}
+add_action('cbtrkr_shop_category_edit_form_fields', 'cbtrkr_shop_category_edit_image_field', 10, 2);
+
+// Update image
+function cbtrkr_shop_category_update_image($term_id, $tt_id) {
+    if (isset($_POST['cbtrkr_shop_category_image']) && '' !== $_POST['cbtrkr_shop_category_image']) {
+        update_term_meta($term_id, 'cbtrkr_shop_category_image', absint($_POST['cbtrkr_shop_category_image']));
+    } else {
+        delete_term_meta($term_id, 'cbtrkr_shop_category_image');
+    }
+}
+add_action('edited_cbtrkr_shop_category', 'cbtrkr_shop_category_update_image', 10, 2);

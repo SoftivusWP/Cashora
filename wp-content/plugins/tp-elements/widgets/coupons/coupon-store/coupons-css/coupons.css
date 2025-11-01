@@ -1,0 +1,324 @@
+:root {
+  --bodyFont: "DM Sans", sans-serif;
+  --titleFont: "Poppins", sans-serif;
+  --transition: all .3s ease;
+  --body_bg: #ffffff;
+  --globalColor: #F5F5F5;
+  --borderColor: #EBECEF;
+  --bodyColor: #4F586D;
+  --titleColor: #222E48;
+  --primaryColor: #00C292;
+  --secondaryColor: #FF6B00;
+  --whiteColor: #ffffff;
+  --blackColor: #1C1C4D;
+  --linkColor: #FF6B00;
+  --hoverColor: var(--secondaryColor);
+  --boxBorderRadius: 8px;
+  --imageBorderRadius: 8px;
+  --btnBorderRadius: 5px;
+  --btnBgColor: #1C1C4D;
+  --btnHoverBgColor: #EB7A23;
+  --btnColor: #ffffff;
+  --btnHoverColor: #ffffff;
+  --btnBgColor2: #EB7A23;
+  --btnHoverBgColor2: #1C1C4D;
+  --btnColor2: #ffffff;
+  --btnHoverColor2: #ffffff;
+}
+
+@keyframes waves {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+@keyframes fadeIn2nd {
+  0% {
+    opacity: 0;
+    transform: translate3d(-10%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+.themephi-addon-coupons.elementor-postion-top .tp-coupon-item {
+  display: block;
+  flex-direction: unset;
+}
+.themephi-addon-coupons.elementor-postion-left .tp-coupon-item {
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 767px) {
+  .themephi-addon-coupons.elementor-postion-left .tp-coupon-item {
+    flex-wrap: wrap;
+  }
+}
+.themephi-addon-coupons.elementor-postion-left .tp-coupon-item .tp-coupon-item-img {
+  display: inline-flex;
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 50%;
+}
+@media (max-width: 767px) {
+  .themephi-addon-coupons.elementor-postion-left .tp-coupon-item .tp-coupon-item-img {
+    max-width: 100%;
+  }
+}
+.themephi-addon-coupons.elementor-postion-left .tp-coupon-item .tp-coupon-item-img a {
+  width: 100%;
+  display: block;
+}
+.themephi-addon-coupons.elementor-postion-left.elementor-vertical-align-top .tp-coupon-item {
+  align-items: start;
+}
+.themephi-addon-coupons.elementor-postion-left.elementor-vertical-align-middle .tp-coupon-item {
+  align-items: center;
+}
+.themephi-addon-coupons.elementor-postion-left.elementor-vertical-align-bottom .tp-coupon-item {
+  align-items: end;
+}
+.themephi-addon-coupons.elementor-postion-right .tp-coupon-item {
+  display: flex;
+  flex-direction: row-reverse;
+}
+@media (max-width: 767px) {
+  .themephi-addon-coupons.elementor-postion-right .tp-coupon-item {
+    flex-wrap: wrap;
+  }
+}
+.themephi-addon-coupons.elementor-postion-right .tp-coupon-item .tp-coupon-item-img {
+  display: inline-flex;
+  flex: 0 0 auto;
+  max-width: 50%;
+}
+@media (max-width: 767px) {
+  .themephi-addon-coupons.elementor-postion-right .tp-coupon-item .tp-coupon-item-img {
+    max-width: 100%;
+  }
+}
+.themephi-addon-coupons.elementor-postion-right.elementor-vertical-align-top .tp-coupon-item {
+  align-items: start;
+}
+.themephi-addon-coupons.elementor-postion-right.elementor-vertical-align-middle .tp-coupon-item {
+  align-items: center;
+}
+.themephi-addon-coupons.elementor-postion-right.elementor-vertical-align-bottom .tp-coupon-item {
+  align-items: end;
+}
+.themephi-addon-coupons.elementor-postion-bottom .tp-coupon-item {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.tp-coupon-item-content-wrapper.elementor-btn-postion-right {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.tp-coupon-item-content-wrapper.elementor-btn-postion-right .tp-coupon-button-wrapp {
+  min-width: 190px;
+}
+.tp-coupon-item-content-wrapper.elementor-btn-postion-right .tp-coupon-button-wrapp {
+  flex: 1;
+}
+.tp-coupon-item-content-wrapper.elementor-btn-postion-right .tp-coupon-button-wrapp.elementor-btn-vertical-align-top {
+  align-items: start;
+  display: flex;
+  max-width: max-content;
+}
+.tp-coupon-item-content-wrapper.elementor-btn-postion-right .tp-coupon-button-wrapp.elementor-btn-vertical-align-middle {
+  align-items: center;
+  display: flex;
+  max-width: max-content;
+}
+.tp-coupon-item-content-wrapper.elementor-btn-postion-right .tp-coupon-button-wrapp.elementor-btn-vertical-align-bottom {
+  align-items: end;
+  display: flex;
+  max-width: max-content;
+}
+.tp-coupon-item-content-wrapper.elementor-btn-postion-top {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.tp-coupon-item-content-wrapper.elementor-btn-postion-top .tp-coupon-button-wrapp {
+  order: -1;
+}
+.tp-coupon-item-content-wrapper.elementor-btn-postion-bottom {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.tp-coupon-item-content-wrapper.elementor-btn-postion-bottom .coupon-action-button {
+  width: auto;
+}
+
+.tp-coupons-wrapper ul.page-numbers {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+.tp-coupons-wrapper ul.page-numbers li {
+  display: inline-block;
+}
+.tp-coupons-wrapper ul.page-numbers li span.current {
+  display: inline-block;
+}
+.tp-coupons-wrapper ul.page-numbers li span, .tp-coupons-wrapper ul.page-numbers li a {
+  display: inline-block;
+  margin: 0 2px;
+  cursor: pointer;
+}
+.tp-coupons-wrapper ul.page-numbers li a.next {
+  position: relative;
+}
+.hidden {
+  display: none;
+  overflow: hidden;
+}
+
+/* Coupons CSS */
+span {
+  display: inline-block;
+}
+
+.tp-coupon-meta-single {
+  display: flex;
+}
+
+.coupon-action-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px dashed var(--btnBgColor);
+  padding: 10px 25px;
+  border-radius: 100px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-width: 190px;
+}
+.coupon-action-button .partial-code {
+  flex: 1;
+  text-align: end;
+}
+.coupon-action-button .code-text {
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  width: 100%;
+  background: var(--btnBgColor);
+  height: calc(100% + 2px);
+  border-radius: 100px;
+  line-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  transition: all 0.3s linear 0s;
+  overflow: hidden;
+}
+.coupon-action-button .code-text:before {
+  border: 1px dashed #fff;
+  border-left: none;
+  border-bottom: none;
+  width: 50px;
+  height: 100%;
+  transition: all 0.3s ease;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  background-image: linear-gradient(67deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 50%, #fff 51%, #fff 66%) !important;
+}
+.coupon-action-button:hover .code-text {
+  width: 100%;
+}
+.coupon-action-button:hover .code-text::before {
+  width: 60px;
+}
+
+.tp-coupon-content-wrapp {
+  flex: 1;
+}
+
+/*  Coupons Slider Navigation and Pagination CSS Start  */
+.portfolio-filter img {
+  width: 26px;
+}
+
+.themephi-addon-coupons .tp-coupon-info-list-item:last-child {
+  margin-right: 0 !important;
+}
+
+.tp-post-share-absolute {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #cdf9ec;
+  z-index: 3;
+  border-radius: 12px;
+}
+.tp-post-share-absolute .post-share a {
+  display: inline-block;
+  margin: 3px 2px;
+  border: 1px solid var(--btnBgColor);
+  padding: 2px 6px;
+  border-radius: 5px;
+}
+.tp-post-share-absolute .post-share a:hover {
+  color: #fff;
+  background-color: var(--btnBgColor);
+}
+.tp-post-share-absolute a.toggle-coupon-share {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  text-align: center;
+}
+
+/*  Coupons Slider Navigation and Pagination CSS End  */
+
+/*# sourceMappingURL=coupons.css.map */

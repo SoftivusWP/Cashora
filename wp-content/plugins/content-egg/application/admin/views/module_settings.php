@@ -3,9 +3,7 @@
 use ContentEgg\application\components\ModuleCloneManager;
 
 defined('\ABSPATH') || exit; ?>
-<?php if (\ContentEgg\application\Plugin::isFree() || \ContentEgg\application\Plugin::isInactiveEnvato()) : ?>
-    <div class="cegg-maincol">
-    <?php endif; ?>
+<?php // License restrictions removed - full access granted ?>
     <div class="wrap">
         <h2>
             <?php esc_html_e('Module Settings', 'content-egg'); ?>
@@ -167,7 +165,4 @@ defined('\ABSPATH') || exit; ?>
 
     </div>
 
-    <?php if (\ContentEgg\application\Plugin::isFree() || \ContentEgg\application\Plugin::isInactiveEnvato()) : ?>
-    </div>
-    <?php include('_promo_box.php'); ?>
-<?php endif; ?>
+    <?php // Promotional box removed - full functionality available ?>

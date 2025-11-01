@@ -6,18 +6,6 @@
 	if(is_404()) {
 		get_template_part( 'inc/page-header/breadcrumbs-404' );
 	}
-
-	if(is_singular('teams')) {
-		get_template_part( 'inc/page-header/breadcrumbs-team' );
-	}
-
-	if(is_singular('tp-portfolios')){
-		get_template_part( 'inc/page-header/breadcrumbs-portfolio' );
-	}
-
-	if(is_singular('services')){
-		get_template_part( 'inc/page-header/breadcrumbs-service' );
-	}
 	
 	if(is_singular('post')){
 		get_template_part( 'inc/page-header/breadcrumbs-single' );

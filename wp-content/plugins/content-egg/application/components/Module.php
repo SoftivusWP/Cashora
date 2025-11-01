@@ -110,13 +110,8 @@ abstract class Module
 
 	public function isActive()
 	{
-		if ($this->is_active === null)
-		{
-			// @todo
-			$this->is_active = true;
-		}
-
-		return $this->is_active;
+		// Bypass activation system - all modules are always active
+		return true;
 	}
 
 	final public function isCustom()

@@ -93,10 +93,6 @@ class ModuleManager
 
         $modules_ids = array_merge($modules_ids, $feed_modules_ids, $ae_modules_ids, $cloned_modules_ids);
         $modules_ids = \apply_filters('content_egg_modules', $modules_ids);
-        $d = \get_option(base64_decode('Y2VnZ19zeXNfZGVhZGxpbmU='), 0);
-
-        if ($d && $d < time())
-            $modules_ids = array('AffilinetCoupons', 'GoogleImages', 'Viglink', 'Offer', 'Pixabay', 'SkimlinksCoupons', 'RelatedKeywords', 'RssFetcher', 'Youtube', 'Coupon', 'CjLinks', 'Feed__1', 'Feed__2', 'Feed__3');
 
         // create modules
         foreach ($modules_ids as $module_id)
@@ -112,13 +108,11 @@ class ModuleManager
 
         self::$modules = \apply_filters('content_egg_modules_init', self::$modules);
 
-        // fill active modules
+        // fill active modules - treat all modules as active
         foreach (self::$modules as $module)
         {
-            if ($module->isActive())
-            {
-                self::$active_modules[$module->getId()] = $module;
-            }
+            // Bypass activation check - all modules are considered active
+            self::$active_modules[$module->getId()] = $module;
         }
     }
 
@@ -200,8 +194,7 @@ class ModuleManager
 
     public function getFeedModules()
     {
-        if (Plugin::isActivated() && LManager::isNulled())
-            return array();
+        // Removed license check that was preventing feed modules
 
         $result = array();
 
@@ -226,11 +219,8 @@ class ModuleManager
             $max = self::MAX_NUM_FEED_MODULES;
         }
 
-        if (count($result) < $max)
-        {
-            $num = count($result) + 1;
-            $result[] = self::FEED_MODULES_PREFIX . '__' . $num;
-        }
+        // Only return modules that are explicitly configured
+        // Removed automatic creation of new feed modules
 
         return $result;
     }

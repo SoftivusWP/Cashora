@@ -1,8 +1,6 @@
 <?php defined('\ABSPATH') || exit; ?>
 
-<?php if (\ContentEgg\application\Plugin::isFree() || \ContentEgg\application\Plugin::isInactiveEnvato()) : ?>
-    <div class="cegg-maincol">
-    <?php endif; ?>
+<?php // License restrictions removed - full access granted ?>
     <div class="wrap">
         <h2>
             <?php esc_html_e('Content Egg Settings', 'content-egg'); ?>
@@ -22,7 +20,4 @@
         </form>
     </div>
 
-    <?php if (\ContentEgg\application\Plugin::isFree() || \ContentEgg\application\Plugin::isInactiveEnvato()) : ?>
-    </div>
-    <?php include('_promo_box.php'); ?>
-<?php endif; ?>
+    <?php // Promotional box removed - full functionality available ?>

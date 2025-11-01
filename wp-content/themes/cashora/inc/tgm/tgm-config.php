@@ -93,12 +93,6 @@ function my_theme_register_required_plugins()
 		),
 
 		array(
-			'name' 		=> 'Woocommerce',
-			'slug' 		=> 'woocommerce',
-			'required' 	=> true,
-		),
-
-		array(
 			'name'               => 'TP Elements', // The plugin name.
 			'slug'               => 'tp-elements', // The plugin slug (typically the folder name).
 			'source'             => 'https://softivuslab.com/wp/cashora/source/plugins/tp-elements.zip', // The plugin source.
